@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#F9FAFB"/>
+
+  <!-- Header -->
+  <text x="400" y="40" text-anchor="middle" fill="#1F2937" font-family="Arial, sans-serif" font-size="24" font-weight="bold">5-Year Financial Projections</text>
+  <text x="400" y="65" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="14">Revenue growth to 3.55M EGP by Year 5</text>
+
+  <!-- Chart area -->
+  <g transform="translate(80, 100)">
+    <!-- Y-axis labels -->
+    <text x="-10" y="50" text-anchor="end" fill="#6B7280" font-family="Arial, sans-serif" font-size="11">4M</text>
+    <text x="-10" y="125" text-anchor="end" fill="#6B7280" font-family="Arial, sans-serif" font-size="11">3M</text>
+    <text x="-10" y="200" text-anchor="end" fill="#6B7280" font-family="Arial, sans-serif" font-size="11">2M</text>
+    <text x="-10" y="275" text-anchor="end" fill="#6B7280" font-family="Arial, sans-serif" font-size="11">1M</text>
+    <text x="-10" y="350" text-anchor="end" fill="#6B7280" font-family="Arial, sans-serif" font-size="11">0</text>
+
+    <!-- Grid lines -->
+    <line x1="0" y1="50" x2="650" y2="50" stroke="#E5E7EB" stroke-width="1"/>
+    <line x1="0" y1="125" x2="650" y2="125" stroke="#E5E7EB" stroke-width="1"/>
+    <line x1="0" y1="200" x2="650" y2="200" stroke="#E5E7EB" stroke-width="1"/>
+    <line x1="0" y1="275" x2="650" y2="275" stroke="#E5E7EB" stroke-width="1"/>
+    <line x1="0" y1="350" x2="650" y2="350" stroke="#E5E7EB" stroke-width="2"/>
+
+    <!-- Revenue bars -->
+    <!-- Year 1: 127,980 EGP -->
+    <g transform="translate(30, 0)">
+      <rect x="0" y="320" width="80" height="30" fill="#2563EB" rx="4"/>
+      <text x="40" y="340" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">128K</text>
+      <text x="40" y="370" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Year 1</text>
+      <text x="40" y="385" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="10">158 rest.</text>
+    </g>
+
+    <!-- Year 2: 298,896 EGP -->
+    <g transform="translate(150, 0)">
+      <rect x="0" y="292" width="80" height="58" fill="#3B82F6" rx="4"/>
+      <text x="40" y="325" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">299K</text>
+      <text x="40" y="370" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Year 2</text>
+      <text x="40" y="385" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="10">369 rest.</text>
+      <text x="40" y="285" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="10" font-weight="bold">+133%</text>
+    </g>
+
+    <!-- Year 3: 705,516 EGP -->
+    <g transform="translate(270, 0)">
+      <rect x="0" y="217" width="80" height="133" fill="#60A5FA" rx="4"/>
+      <text x="40" y="287" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">706K</text>
+      <text x="40" y="370" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Year 3</text>
+      <text x="40" y="385" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="10">871 rest.</text>
+      <text x="40" y="210" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="10" font-weight="bold">+136%</text>
+    </g>
+
+    <!-- Year 4: 1,640,256 EGP -->
+    <g transform="translate(390, 0)">
+      <rect x="0" y="140" width="80" height="210" fill="#93C5FD" rx="4"/>
+      <text x="40" y="250" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">1.64M</text>
+      <text x="40" y="370" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Year 4</text>
+      <text x="40" y="385" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="10">2,025 rest.</text>
+      <text x="40" y="133" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="10" font-weight="bold">+132%</text>
+    </g>
+
+    <!-- Year 5: 3,550,236 EGP -->
+    <g transform="translate(510, 0)">
+      <rect x="0" y="33" width="80" height="317" fill="#BFDBFE" rx="4"/>
+      <text x="40" y="195" text-anchor="middle" fill="#1E40AF" font-family="Arial, sans-serif" font-size="14" font-weight="bold">3.55M</text>
+      <text x="40" y="370" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Year 5</text>
+      <text x="40" y="385" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="10">4,383 rest.</text>
+      <text x="40" y="26" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="10" font-weight="bold">+116%</text>
+    </g>
+  </g>
+
+  <!-- Summary stats -->
+  <g transform="translate(80, 420)">
+    <rect width="180" height="60" fill="#ECFDF5" stroke="#10B981" rx="8"/>
+    <text x="90" y="20" text-anchor="middle" fill="#065F46" font-family="Arial, sans-serif" font-size="11">5-Year Total Revenue</text>
+    <text x="90" y="45" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="20" font-weight="bold">6.3M EGP</text>
+  </g>
+
+  <g transform="translate(280, 420)">
+    <rect width="180" height="60" fill="#EFF6FF" stroke="#2563EB" rx="8"/>
+    <text x="90" y="20" text-anchor="middle" fill="#1E40AF" font-family="Arial, sans-serif" font-size="11">5-Year Net Revenue</text>
+    <text x="90" y="45" text-anchor="middle" fill="#2563EB" font-family="Arial, sans-serif" font-size="20" font-weight="bold">4.3M EGP</text>
+  </g>
+
+  <g transform="translate(480, 420)">
+    <rect width="180" height="60" fill="#FEF3C7" stroke="#F59E0B" rx="8"/>
+    <text x="90" y="20" text-anchor="middle" fill="#92400E" font-family="Arial, sans-serif" font-size="11">LTV:CAC Ratio</text>
+    <text x="90" y="45" text-anchor="middle" fill="#F59E0B" font-family="Arial, sans-serif" font-size="20" font-weight="bold">21x</text>
+  </g>
+
+  <!-- CAGR badge -->
+  <g transform="translate(680, 120)">
+    <rect width="100" height="80" fill="white" stroke="#10B981" stroke-width="2" rx="8"/>
+    <text x="50" y="25" text-anchor="middle" fill="#065F46" font-family="Arial, sans-serif" font-size="11" font-weight="bold">CAGR</text>
+    <text x="50" y="55" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="28" font-weight="bold">99%</text>
+  </g>
+</svg>

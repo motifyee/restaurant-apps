@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400">
+  <!-- Background -->
+  <rect width="900" height="400" fill="#F9FAFB"/>
+
+  <!-- Header -->
+  <text x="450" y="35" text-anchor="middle" fill="#1F2937" font-family="Arial, sans-serif" font-size="22" font-weight="bold">Timeline to Profitability</text>
+  <text x="450" y="55" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="13">From pilot to market leader in 60 months</text>
+
+  <!-- Timeline base -->
+  <line x1="80" y1="250" x2="820" y2="250" stroke="#E5E7EB" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Milestone 1: Month 6 - Pilot -->
+  <g transform="translate(130, 250)">
+    <circle cx="0" cy="0" r="12" fill="#2563EB"/>
+    <line x1="0" y1="0" x2="0" y2="-60" stroke="#2563EB" stroke-width="2"/>
+    <rect x="-50" y="-100" width="100" height="45" fill="white" stroke="#2563EB" rx="5"/>
+    <text x="0" y="-85" text-anchor="middle" fill="#1E40AF" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Month 6</text>
+    <text x="0" y="-70" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="10">Pilot Complete</text>
+    <text x="0" y="-58" text-anchor="middle" fill="#2563EB" font-family="Arial, sans-serif" font-size="12" font-weight="bold">20 restaurants</text>
+  </g>
+
+  <!-- Milestone 2: Month 11 - Breakeven (highlighted) -->
+  <g transform="translate(280, 250)">
+    <circle cx="0" cy="0" r="16" fill="#10B981" stroke="#065F46" stroke-width="3"/>
+    <line x1="0" y1="0" x2="0" y2="-80" stroke="#10B981" stroke-width="2"/>
+    <rect x="-60" y="-130" width="120" height="55" fill="#ECFDF5" stroke="#10B981" rx="5"/>
+    <text x="0" y="-115" text-anchor="middle" fill="#065F46" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Month 11 ✅</text>
+    <text x="0" y="-100" text-anchor="middle" fill="#059669" font-family="Arial, sans-serif" font-size="11">BREAK EVEN</text>
+    <text x="0" y="-85" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Unit economics +</text>
+  </g>
+
+  <!-- Milestone 3: Month 18 - Cash flow positive (highlighted) -->
+  <g transform="translate(430, 250)">
+    <circle cx="0" cy="0" r="16" fill="#10B981" stroke="#065F46" stroke-width="3"/>
+    <line x1="0" y1="0" x2="0" y2="-80" stroke="#10B981" stroke-width="2"/>
+    <rect x="-65" y="-130" width="130" height="55" fill="#ECFDF5" stroke="#10B981" rx="5"/>
+    <text x="0" y="-115" text-anchor="middle" fill="#065F46" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Month 18 ✅</text>
+    <text x="0" y="-100" text-anchor="middle" fill="#059669" font-family="Arial, sans-serif" font-size="11">CASH FLOW POSITIVE</text>
+    <text x="0" y="-85" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="13" font-weight="bold">369 restaurants</text>
+  </g>
+
+  <!-- Milestone 4: Month 36 - Series A -->
+  <g transform="translate(580, 250)">
+    <circle cx="0" cy="0" r="12" fill="#2563EB"/>
+    <line x1="0" y1="0" x2="0" y2="-60" stroke="#2563EB" stroke-width="2"/>
+    <rect x="-55" y="-100" width="110" height="45" fill="white" stroke="#2563EB" rx="5"/>
+    <text x="0" y="-85" text-anchor="middle" fill="#1E40AF" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Month 36</text>
+    <text x="0" y="-70" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="10">Series A Ready</text>
+    <text x="0" y="-58" text-anchor="middle" fill="#2563EB" font-family="Arial, sans-serif" font-size="12" font-weight="bold">1,000+ restaurants</text>
+  </g>
+
+  <!-- Milestone 5: Month 60 - Market leader -->
+  <g transform="translate(730, 250)">
+    <circle cx="0" cy="0" r="12" fill="#F59E0B"/>
+    <line x1="0" y1="0" x2="0" y2="-60" stroke="#F59E0B" stroke-width="2"/>
+    <rect x="-55" y="-100" width="110" height="45" fill="white" stroke="#F59E0B" rx="5"/>
+    <text x="0" y="-85" text-anchor="middle" fill="#92400E" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Month 60</text>
+    <text x="0" y="-70" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="10">Market Leader</text>
+    <text x="0" y="-58" text-anchor="middle" fill="#F59E0B" font-family="Arial, sans-serif" font-size="12" font-weight="bold">4,000+ restaurants</text>
+  </g>
+
+  <!-- Phase labels -->
+  <text x="205" y="290" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="10" font-style="italic">Launch</text>
+  <text x="355" y="290" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="10" font-style="italic">Scale Cairo</text>
+  <text x="505" y="290" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="10" font-style="italic">Expansion</text>
+  <text x="655" y="290" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="10" font-style="italic">Maturity</text>
+
+  <!-- Key metrics -->
+  <g transform="translate(50, 330)">
+    <rect width="800" height="50" fill="#ECFDF5" stroke="#10B981" rx="8"/>
+    <text x="400" y="20" text-anchor="middle" fill="#065F46" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Your investment gets us to profitability with significant upside</text>
+    <text x="200" y="40" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="11">Breakeven: Month 11</text>
+    <text x="400" y="40" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="11">Cash Flow Positive: Month 18</text>
+    <text x="600" y="40" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="11">Series A: Month 36</text>
+  </g>
+
+  <!-- Arrow showing progression -->
+  <g transform="translate(820, 250)">
+    <polygon points="0,-8 15,0 0,8" fill="#10B981"/>
+  </g>
+
+  <!-- Year markers -->
+  <text x="130" y="275" text-anchor="middle" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="9">Y1</text>
+  <text x="430" y="275" text-anchor="middle" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="9">Y1.5</text>
+  <text x="730" y="275" text-anchor="middle" fill="#9CA3AF" font-family="Arial, sans-serif" font-size="9">Y5</text>
+</svg>

@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" width="800" height="250">
+  <!-- Background -->
+  <rect width="800" height="250" fill="#F9FAFB"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#1F2937" font-family="Arial, sans-serif" font-size="20" font-weight="bold">Customer Journey: Scan to Review</text>
+
+  <!-- Step 1: SCAN -->
+  <g transform="translate(50, 80)">
+    <circle cx="60" cy="60" r="55" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+    <text x="60" y="50" text-anchor="middle" fill="#2563EB" font-family="Arial, sans-serif" font-size="12" font-weight="bold">SCAN</text>
+    <!-- QR icon -->
+    <rect x="40" y="55" width="40" height="40" fill="#2563EB" rx="4"/>
+    <rect x="45" y="60" width="10" height="10" fill="white"/>
+    <rect x="60" y="60" width="10" height="10" fill="white"/>
+    <rect x="45" y="75" width="10" height="10" fill="white"/>
+    <text x="60" y="145" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="11">Scan QR code</text>
+    <text x="60" y="160" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="10">at your table</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g transform="translate(165, 140)">
+    <line x1="0" y1="0" x2="35" y2="0" stroke="#2563EB" stroke-width="3"/>
+    <polygon points="35,-6 47,0 35,6" fill="#2563EB"/>
+  </g>
+
+  <!-- Step 2: ORDER -->
+  <g transform="translate(220, 80)">
+    <circle cx="60" cy="60" r="55" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+    <text x="60" y="50" text-anchor="middle" fill="#2563EB" font-family="Arial, sans-serif" font-size="12" font-weight="bold">ORDER</text>
+    <!-- Menu icon -->
+    <rect x="35" y="55" width="50" height="40" fill="#2563EB" rx="3"/>
+    <line x1="40" y1="65" x2="80" y2="65" stroke="white" stroke-width="2"/>
+    <line x1="40" y1="75" x2="70" y2="75" stroke="white" stroke-width="2"/>
+    <line x1="40" y1="85" x2="60" y2="85" stroke="white" stroke-width="2"/>
+    <text x="60" y="145" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="11">Browse menu</text>
+    <text x="60" y="160" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="10">& add items</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g transform="translate(335, 140)">
+    <line x1="0" y1="0" x2="35" y2="0" stroke="#2563EB" stroke-width="3"/>
+    <polygon points="35,-6 47,0 35,6" fill="#2563EB"/>
+  </g>
+
+  <!-- Step 3: TRACK -->
+  <g transform="translate(390, 80)">
+    <circle cx="60" cy="60" r="55" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+    <text x="60" y="50" text-anchor="middle" fill="#2563EB" font-family="Arial, sans-serif" font-size="12" font-weight="bold">TRACK</text>
+    <!-- Clock icon -->
+    <circle cx="60" cy="75" r="18" fill="none" stroke="#2563EB" stroke-width="3"/>
+    <line x1="60" y1="75" x2="60" y2="62" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+    <line x1="60" y1="75" x2="70" y2="80" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+    <text x="60" y="145" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="11">Real-time</text>
+    <text x="60" y="160" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="10">order updates</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <g transform="translate(505, 140)">
+    <line x1="0" y1="0" x2="35" y2="0" stroke="#2563EB" stroke-width="3"/>
+    <polygon points="35,-6 47,0 35,6" fill="#2563EB"/>
+  </g>
+
+  <!-- Step 4: PAY -->
+  <g transform="translate(560, 80)">
+    <circle cx="60" cy="60" r="55" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+    <text x="60" y="50" text-anchor="middle" fill="#2563EB" font-family="Arial, sans-serif" font-size="12" font-weight="bold">PAY</text>
+    <!-- Card icon -->
+    <rect x="35" y="60" width="50" height="35" fill="#2563EB" rx="4"/>
+    <rect x="40" y="70" width="25" height="6" fill="white" rx="2"/>
+    <text x="45" y="88" fill="white" font-family="Arial, sans-serif" font-size="8">••••</text>
+    <text x="60" y="145" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="11">Secure</text>
+    <text x="60" y="160" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="10">payment</text>
+  </g>
+
+  <!-- Arrow 4 -->
+  <g transform="translate(675, 140)">
+    <line x1="0" y1="0" x2="35" y2="0" stroke="#2563EB" stroke-width="3"/>
+    <polygon points="35,-6 47,0 35,6" fill="#2563EB"/>
+  </g>
+
+  <!-- Step 5: REVIEW -->
+  <g transform="translate(730, 80)">
+    <circle cx="60" cy="60" r="55" fill="#ECFDF5" stroke="#10B981" stroke-width="3"/>
+    <text x="60" y="50" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="12" font-weight="bold">RATE</text>
+    <!-- Star icon -->
+    <polygon points="60,58 65,70 78,70 68,79 72,92 60,85 48,92 52,79 42,70 55,70" fill="#10B981"/>
+    <text x="60" y="145" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="11">Share your</text>
+    <text x="60" y="160" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="10">experience</text>
+  </g>
+
+  <!-- Timing badges -->
+  <g transform="translate(0, 220)">
+    <rect x="70" y="-12" width="100" height="20" fill="#DBEAFE" rx="10"/>
+    <text x="120" y="2" text-anchor="middle" fill="#1E40AF" font-family="Arial, sans-serif" font-size="10" font-weight="bold">&lt; 2 seconds</text>
+
+    <rect x="240" y="-12" width="100" height="20" fill="#DBEAFE" rx="10"/>
+    <text x="290" y="2" text-anchor="middle" fill="#1E40AF" font-family="Arial, sans-serif" font-size="10" font-weight="bold">&lt; 30 seconds</text>
+
+    <rect x="410" y="-12" width="100" height="20" fill="#DBEAFE" rx="10"/>
+    <text x="460" y="2" text-anchor="middle" fill="#1E40AF" font-family="Arial, sans-serif" font-size="10" font-weight="bold">&lt; 100ms SSE</text>
+  </g>
+</svg>

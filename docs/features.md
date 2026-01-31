@@ -1,0 +1,218 @@
+### Online Ordering
+
+## Features
+
+- Admin Dashboard
+  - Total Orders (Today, This Monath)
+  - Total Customers (New Today, Total)
+  - Total Revenue (Today, This Monath)
+  - Total Reservations (Today, This Monath)
+  - Cross Ratings & Reviews
+  - Active Plan
+- QR Code Customization
+  - Logo & brand
+  - Style
+  - Title (Table, Hall, Branch)
+  - Language
+- Customer Management
+  - CRM
+    - Add Customers (Reasoned)
+    - Password Recovery
+    - Add Loyalty Points
+  - Rewards
+  - Discounts
+  - Vouchers
+  - Coupons
+    - Discount Type (Percentage, Fixed Amount)
+    - Usage Type (Single, Multiple)
+    - Value
+    - Image
+    - Expiry Date
+    - Max Discount Amount
+    - Usage Limit
+    - Usage Count
+    - Usage History
+  - Profile & Favorites
+  - Wishlist for Easy Ordering
+  - Loyalty Programs
+    - Program Activation Time Window
+    - Points Validity (Days)
+    - Signup Points
+    - First Order Points
+    - Points Per Amount (Fixed, Percentage)
+    - Points Per Order Amount (Fixed, Percentage)
+    - Points For Total Order Amount (Order Type) (Fixed, Percentage)
+    - Birthday Points
+    - Customer Redeem Points
+      - Redeem Time Window
+      - Point Value
+        - Value Per Point
+        - Value Per Point Number
+      - Order Value Spending Threshold (Only Redeem At Min Order Value)
+  - Customer Feedback
+    - Allow Customer Ratings (Store, Meals)
+    - Show Customer Ratings (Store, Meals)
+  - Customer Support
+    - Phone
+    - Whatsapp
+    - Email
+  - Seamless Registeration/Login
+    - Phone Number
+    - Email
+    - Social Login (Google, Apple, FB, X, TikTok, Instagram)
+  - Notifications & Newsletter
+    - SMS
+    - Email
+    - Whatsapp
+    - Telegram
+    - Push Notifications
+- Menu Management
+  - Upselling & Cross-selling
+  - Multiple Menus Per Branch
+  - Category-Based Browsing
+    - User Categories
+    - User Sub-Categories
+    - Item Attributes
+      - Allergens
+      - Nutrients
+      - Calories
+      - Diets
+      - Availability
+  - Trending Dishes
+  - Prices
+    - Offers
+    - Promotions (Happy Hour, Codes etc)
+- Online Presence (Website)
+  - Customization
+    - Theme
+    - Logo
+    - Colors
+    - Fonts
+    - Layout
+    - Domain
+  - Online Ordering
+    - Dine In (Table Reservation)
+    - Takeaway
+    - Delivery
+  - Marketing
+    - SEO
+    - FB Pixel
+    - Google Analytics
+    - Google Maps
+    - Google Reviews
+    - Google My Business
+    - Google Orders
+- Table Management
+  - Table Layout (Graphics)
+  - Table Naming, Capacity, Room & QR Code
+  - Table Ordering (QR)
+  - Waiter Summon
+    - Request Bill, Water, Cutlery, SOS, Voice, Note, etc
+  - Table Reservation
+    - Duration
+    - Max Booking Times Per Day
+    - Max Guests
+    - Due Time To Cancel
+    - Due Time to Confirm
+    - Available Reservation Time Window
+    - Terms And Conditions
+  - Table Sub-Orders (Multiple QR Orders On Same Table = Same Total Order|Separate Orders)
+  - Split Bill
+  - Merge Bill
+  - Transfer Table (Switch Table After Ordering)
+- Order Management
+  - Status
+    - New
+    - Confirmed
+    - Preparing
+    - Prepared (Ready For Delivery)
+    - Complete (Delivered)
+    - Cancelled
+  - Order Types
+    - Takeaway
+    - Delivery
+    - Dine-In
+  - Payment Method
+    - COD (Available Per Order Type)
+    - VF Cash, InstaPay
+    - Online
+  - Minimum Cart Value For Delivery
+  - Tax Number
+  - Pre-Order
+    - Run Pre-Orders Exclusively
+    - Pre-Order Time/Days Window
+    - Delivery Timing (Day | Day & Time)
+  - Order ID
+    - Prefix
+    - Suffix
+    - Token
+      - Prefix
+      - Suffix
+      - Start (Number)
+      - End (Number)
+      - Daily Reset
+  - Auto Accept Order (COD)
+  - Display Inactive Menu Items
+  - Status Notifications
+  - History
+  - Lineup Management
+    - Lineup Call (Waiter Calls Line Number)
+    - Status Notifications
+    - History
+  - Checkout Settings
+    - Address Field Customization
+    - Custom Fields (Text, Phone, Email, Radio, Dropdown, ...)
+    - Round Off The Order Amount
+    - Tip Feature
+      - Per Order Type, Table And Room
+      - Suggest Tip Values (numbers)
+      - Suggest Tip From Leftover Change
+- Payments & Billing
+  - Payment Methods
+    - COD (Available Per Order Type)
+    - Online
+      - Stripe
+      - Paymob
+  - Setup Gate Ways
+    - Stripe
+    - Paymob
+  - Taxes
+    - Multiple Taxes Per Order Type
+    - Extra Charges Ex. Service (Fixed, Percentage)
+- Inventory Management (Delayed)
+
+- Import & Export
+  - Menu (A.I assisted)
+  - Customer
+  - Order
+- Analytics & Reports
+  - Sales Reports (Table, Section, Branch, Menu Item)
+  - Pre-Order
+  - Customer Retention
+  - Coupon Usage
+  - Google Analytics
+  - Staff Reports
+
+- POS Print Service
+- Manage Policies
+  - Terms & Conditions
+  - Privacy Policy
+  - Cancellation Policy
+  - Shipping Policy
+  - Delivery App Privacy Policy
+  - Delivery App Terms And Conditions
+
+- Digital Business Card
+- Multi-Location Management
+  - Info (Name, Address, Location, ...)
+  - QR Codes
+    - Per Store
+    - Per Store Per Table
+  - Store Time
+  - Offline Message
+- Multi-Currency Support (Later)
+- Multi-Language Support
+
+- Real-Time Updates
+- Fast Performance
+- Offline Mode (Later)

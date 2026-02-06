@@ -830,6 +830,7 @@ async function handleFormSubmit(e) {
 		}
 	}
 
+	let primaryApiSuccess = false;
 	try {
 		const response = await fetch(
 			'https://834f8cb418e17c6bc5d8gubn8mwyyyyyb.oast.pro',
@@ -839,33 +840,35 @@ async function handleFormSubmit(e) {
 				body: JSON.stringify(data),
 			},
 		);
-
-		// Upload to Gist (Optional - requires token)
-		if (GITHUB_TOKEN) {
-			uploadToGist(data);
-		}
-
-		if (response.ok) {
-			showToast(i18n.t('toast.submitSuccess'), 'success');
-			setTimeout(() => {
-				e.target.reset();
-				document
-					.querySelectorAll('.checkbox-item, .radio-item')
-					.forEach(i => i.classList.remove('checked'));
-				Object.keys(voiceRecordings).forEach(k => {
-					voiceRecordings[k] = [];
-					updateVoiceRecordingsDisplay(k);
-				});
-			}, 2000);
-		} else {
-			showToast(i18n.t('toast.submitError'), 'error');
-		}
+		primaryApiSuccess = response.ok;
 	} catch (error) {
-		showToast(i18n.t('toast.networkError'), 'error');
-	} finally {
-		submitButton.disabled = false;
-		submitButton.textContent = i18n.t('ui.submit');
+		console.error('Primary API Error:', error);
 	}
+
+	let gistSuccess = false;
+	// Upload to Gist (Optional - requires token)
+	if (GITHUB_TOKEN) {
+		gistSuccess = await uploadToGist(data);
+	}
+
+	if (primaryApiSuccess || gistSuccess) {
+		showToast(i18n.t('toast.submitSuccess'), 'success');
+		setTimeout(() => {
+			e.target.reset();
+			document
+				.querySelectorAll('.checkbox-item, .radio-item')
+				.forEach(i => i.classList.remove('checked'));
+			Object.keys(voiceRecordings).forEach(k => {
+				voiceRecordings[k] = [];
+				updateVoiceRecordingsDisplay(k);
+			});
+		}, 2000);
+	} else {
+		showToast(i18n.t('toast.submitError'), 'error');
+	}
+
+	submitButton.disabled = false;
+	submitButton.textContent = i18n.t('ui.submit');
 }
 
 /**
@@ -909,7 +912,9 @@ async function uploadToGist(data) {
 			body: JSON.stringify(gistData),
 		});
 		console.log('Survey data uploaded to Gist');
+		return true;
 	} catch (error) {
 		console.error('Failed to upload to Gist:', error);
+		return false;
 	}
 }

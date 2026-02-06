@@ -505,13 +505,7 @@ function createVoiceInput(fieldName) {
 	// Initialize recording storage for this field
 	voiceRecordings[fieldName] = [];
 
-	const noteHtml =
-		fieldName === 'badDayDescription'
-			? `<p style="font-size: 0.875rem; color: #666; margin-bottom: 0.75rem;">${i18n.t('voiceNote')}</p>`
-			: '';
-
 	container.innerHTML = `
-        ${noteHtml}
         <button type="button" class="voice-button" data-field="${fieldName}">
             ${i18n.t('ui.recordVoice')}
         </button>

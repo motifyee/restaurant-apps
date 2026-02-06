@@ -46,7 +46,6 @@ export const bilingualSurveyData = {
 						en: 'Enter your restaurant name',
 						ar: 'أدخل اسم مطعمك',
 					},
-					required: true,
 				},
 				{
 					label: {
@@ -65,7 +64,6 @@ export const bilingualSurveyData = {
 						{ label: { en: 'Customer', ar: 'عميل' }, value: 'customer' },
 						{ label: { en: 'Other', ar: 'آخر' }, value: 'other' },
 					],
-					required: true,
 				},
 				{
 					label: {
@@ -78,13 +76,11 @@ export const bilingualSurveyData = {
 							name: 'surveyedName',
 							type: 'text',
 							placeholder: { en: 'Full name', ar: 'الاسم الكامل' },
-							required: true,
 						},
 						{
 							name: 'surveyedEmail',
 							type: 'email',
 							placeholder: { en: 'Email address', ar: 'البريد الإلكتروني' },
-							required: true,
 							style: 'margin-top: 1rem;',
 						},
 						{

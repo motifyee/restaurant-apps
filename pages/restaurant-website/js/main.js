@@ -2,14 +2,20 @@
  * Restaurant Website - Main JavaScript
  *
  * Handles navigation, mobile menu, sticky header,
- * theme switching, and smooth scrolling functionality.
+ * theme switching, smooth scrolling functionality,
+ * and bilingual support (English/Arabic).
  */
+
+import i18n from './i18n.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	initTheme();
 	initNavigation();
 	initSmoothScroll();
 	initActiveNavLinks();
+
+	// Initialize i18n system for bilingual support
+	i18n.init();
 });
 
 /**
@@ -24,7 +30,9 @@ function initTheme() {
 
 	// Get saved theme or system preference
 	const savedTheme = localStorage.getItem('theme');
-	const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+	const systemPrefersDark = window.matchMedia(
+		'(prefers-color-scheme: dark)',
+	).matches;
 
 	// Set initial theme
 	let currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
@@ -32,18 +40,21 @@ function initTheme() {
 
 	// Handle theme toggle click
 	themeToggle.addEventListener('click', () => {
-		currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+		currentTheme =
+			document.documentElement.getAttribute('data-theme') || 'dark';
 		const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 		setTheme(newTheme);
 	});
 
 	// Listen for system theme changes
-	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-		// Only update if user hasn't manually set a preference
-		if (!localStorage.getItem('theme')) {
-			setTheme(e.matches ? 'dark' : 'light');
-		}
-	});
+	window
+		.matchMedia('(prefers-color-scheme: dark)')
+		.addEventListener('change', e => {
+			// Only update if user hasn't manually set a preference
+			if (!localStorage.getItem('theme')) {
+				setTheme(e.matches ? 'dark' : 'light');
+			}
+		});
 }
 
 /**

@@ -1,0 +1,303 @@
+/**
+ * i18n & RTL Styles
+ * Handles language-specific styling and RTL support for Arabic
+ */
+
+/* ============================================
+   Language Switcher Button
+   ============================================ */
+
+.language-toggle {
+	display: flex;
+	align-items: center;
+	gap: var(--space-2);
+	padding: var(--space-2) var(--space-4);
+	background: transparent;
+	border: 1px solid var(--border);
+	border-radius: var(--radius-full);
+	color: var(--text-primary);
+	cursor: pointer;
+	transition: all var(--transition-normal);
+	font-size: var(--text-sm);
+	font-weight: 500;
+}
+
+.language-toggle:hover {
+	background: var(--bg-secondary);
+	border-color: var(--primary);
+	transform: translateY(-1px);
+}
+
+.language-toggle:active {
+	transform: translateY(0);
+}
+
+.language-toggle__icon {
+	font-size: 1.1rem;
+	line-height: 1;
+}
+
+.language-toggle__text {
+	line-height: 1;
+	white-space: nowrap;
+}
+
+/* Mobile: Icon only */
+@media (max-width: 768px) {
+	.language-toggle {
+		padding: var(--space-2);
+		min-width: 40px;
+		justify-content: center;
+	}
+
+	.language-toggle__text {
+		display: none;
+	}
+}
+
+/* ============================================
+   RTL Support
+   ============================================ */
+
+/* Apply RTL direction when Arabic is active */
+html[dir='rtl'] {
+	direction: rtl;
+}
+
+html[dir='ltr'] {
+	direction: ltr;
+}
+
+/* Flip flex directions for RTL */
+html[dir='rtl'] .navbar__inner,
+html[dir='rtl'] .navbar__menu,
+html[dir='rtl'] .hero__actions,
+html[dir='rtl'] .card__footer,
+html[dir='rtl'] .testimonial__author,
+html[dir='rtl'] .footer__grid,
+html[dir='rtl'] .footer__social,
+html[dir='rtl'] .footer__links,
+html[dir='rtl'] .hours-item,
+html[dir='rtl'] .footer__legal {
+	direction: rtl;
+}
+
+/* Adjust margins and padding for RTL */
+html[dir='rtl'] .navbar__logo {
+	margin-right: 0;
+	margin-left: auto;
+}
+
+html[dir='rtl'] .navbar__menu {
+	margin-left: 0;
+	margin-right: auto;
+}
+
+html[dir='rtl'] .section-header__badge::before,
+html[dir='rtl'] .card__badge::before {
+	right: auto;
+	left: 0;
+}
+
+html[dir='rtl'] .testimonial__avatar {
+	margin-right: 0;
+	margin-left: var(--space-4);
+}
+
+html[dir='rtl'] .footer__contact-item svg {
+	margin-right: 0;
+	margin-left: var(--space-3);
+}
+
+/* Flip animations for RTL */
+html[dir='rtl'] .hover-lift:hover {
+	transform: translateY(-8px) scale(1.01);
+}
+
+html[dir='rtl'] .reveal {
+	animation: revealRTL 0.8s ease-out forwards;
+}
+
+@keyframes revealRTL {
+	from {
+		opacity: 0;
+		transform: translateX(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+/* Mobile menu alignment for RTL - no position changes needed, 
+   the base mobile-nav already covers full screen properly */
+
+/* Text alignment for RTL */
+html[dir='rtl'] .hero__content,
+html[dir='rtl'] .section-header,
+html[dir='rtl'] .about-story,
+html[dir='rtl'] .cta-section {
+	text-align: right;
+}
+
+html[dir='rtl'] .text-center {
+	text-align: center !important;
+}
+
+/* Stats section for RTL */
+html[dir='rtl'] .stats {
+	direction: rtl;
+}
+
+/* Grid layouts maintain their structure but align content right */
+html[dir='rtl'] .card__content,
+html[dir='rtl'] .testimonial {
+	text-align: right;
+}
+
+/* Footer alignment */
+html[dir='rtl'] .footer__brand,
+html[dir='rtl'] .footer__description {
+	text-align: right;
+}
+
+html[dir='rtl'] .footer__bottom {
+	flex-direction: row-reverse;
+}
+
+/* Navbar toggle (hamburger) position for RTL */
+html[dir='rtl'] .navbar__toggle {
+	left: var(--space-4);
+	right: auto;
+}
+
+@media (max-width: 768px) {
+	html[dir='rtl'] .navbar__toggle {
+		left: var(--space-3);
+	}
+}
+
+/* Hero scroll indicator */
+html[dir='rtl'] .hero__scroll {
+	left: auto;
+	right: 50%;
+	transform: translateX(50%);
+}
+
+/* About story image positioning */
+html[dir='rtl'] .about-story {
+	flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+	html[dir='rtl'] .about-story {
+		flex-direction: column;
+	}
+}
+
+/* ============================================
+   Arabic Font Optimization
+   ============================================ */
+
+/* Use system Arabic fonts for better readability */
+html[lang='ar'] body {
+	font-family: 'Segoe UI', Tahoma, 'Arial', 'Noto Sans Arabic', sans-serif;
+}
+
+/* Adjust font sizes for Arabic (typically needs slightly larger size) */
+html[lang='ar'] {
+	font-size: 17px; /* Slightly larger base for Arabic */
+}
+
+html[lang='en'] {
+	font-size: 16px; /* Standard for English */
+}
+
+/* Adjust line height for Arabic text */
+html[lang='ar'] body {
+	line-height: 1.8;
+}
+
+/* Better spacing for Arabic headings */
+html[lang='ar'] h1,
+html[lang='ar'] h2,
+html[lang='ar'] h3,
+html[lang='ar'] h4,
+html[lang='ar'] h5,
+html[lang='ar'] h6 {
+	letter-spacing: 0;
+	word-spacing: 0.05em;
+}
+
+/* ============================================
+   Button Text Alignment
+   ============================================ */
+
+html[dir='rtl'] .btn {
+	text-align: center;
+}
+
+/* ============================================
+   Responsive Adjustments
+   ============================================ */
+
+@media (max-width: 992px) {
+	html[dir='rtl'] .navbar__menu {
+		flex-direction: column;
+		align-items: flex-end;
+	}
+
+	html[dir='rtl'] .footer__grid {
+		text-align: right;
+	}
+}
+
+@media (max-width: 768px) {
+	html[dir='rtl'] .hero__content {
+		text-align: center;
+	}
+
+	html[dir='rtl'] .section-header {
+		text-align: center;
+	}
+
+	html[dir='rtl'] .card__content,
+	html[dir='rtl'] .testimonial {
+		text-align: center;
+	}
+}
+
+/* ============================================
+   Loading State
+   ============================================ */
+
+/* Prevent flash of unstyled content during language switch */
+body.switching-language {
+	opacity: 0.7;
+	pointer-events: none;
+	transition: opacity 0.2s ease;
+}
+
+/* Smooth transition for language changes */
+[data-i18n] {
+	transition: opacity 0.15s ease;
+}
+
+/* ============================================
+   Accessibility
+   ============================================ */
+
+/* Ensure language toggle is keyboard accessible */
+.language-toggle:focus {
+	outline: 2px solid var(--primary);
+	outline-offset: 2px;
+}
+
+.language-toggle:focus:not(:focus-visible) {
+	outline: none;
+}
+
+.language-toggle:focus-visible {
+	outline: 2px solid var(--primary);
+	outline-offset: 2px;
+}

@@ -13,6 +13,7 @@
 @import url('./base.css');
 @import url('./components.css');
 @import url('./animations.css');
+@import url('./i18n.css');
 
 /* ========================================
    PAGE-SPECIFIC STYLES

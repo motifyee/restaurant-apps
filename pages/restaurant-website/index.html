@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,14 +44,37 @@
 				</a>
 
 				<div class="navbar__menu">
-					<a href="index.html" class="navbar__link active">Home</a>
-					<a href="menu.html" class="navbar__link">Menu</a>
-					<a href="about.html" class="navbar__link">About</a>
-					<a href="contact.html" class="navbar__link">Contact</a>
-					<a href="reservations.html" class="navbar__link">Reservations</a>
+					<a href="index.html" class="navbar__link active" data-i18n="navHome"
+						>Home</a
+					>
+					<a href="menu.html" class="navbar__link" data-i18n="navMenu">Menu</a>
+					<a href="about.html" class="navbar__link" data-i18n="navAbout"
+						>About</a
+					>
+					<a href="contact.html" class="navbar__link" data-i18n="navContact"
+						>Contact</a
+					>
+					<a
+						href="reservations.html"
+						class="navbar__link"
+						data-i18n="navReservations"
+						>Reservations</a
+					>
 				</div>
 
 				<div style="display: flex; align-items: center; gap: var(--space-4)">
+					<!-- Language Switcher -->
+					<button
+						class="language-toggle"
+						id="language-toggle"
+						aria-label="Switch language"
+						title="Toggle language"
+					>
+						<span class="language-toggle__icon">🇸🇦</span>
+						<span class="language-toggle__text">عربي</span>
+					</button>
+
+					<!-- Theme Toggle -->
 					<button
 						class="theme-toggle navbar__theme-toggle"
 						id="theme-toggle"
@@ -94,7 +117,10 @@
 						</svg>
 					</button>
 
-					<a href="reservations.html" class="btn btn--primary navbar__cta"
+					<a
+						href="reservations.html"
+						class="btn btn--primary navbar__cta"
+						data-i18n="btnBookTable"
 						>Book a Table</a
 					>
 				</div>
@@ -113,11 +139,20 @@
 
 		<!-- Mobile Navigation -->
 		<div class="mobile-nav" id="mobile-nav">
-			<a href="index.html" class="mobile-nav__link">Home</a>
-			<a href="menu.html" class="mobile-nav__link">Menu</a>
-			<a href="about.html" class="mobile-nav__link">About</a>
-			<a href="contact.html" class="mobile-nav__link">Contact</a>
-			<a href="reservations.html" class="mobile-nav__link">Reservations</a>
+			<a href="index.html" class="mobile-nav__link" data-i18n="navHome">Home</a>
+			<a href="menu.html" class="mobile-nav__link" data-i18n="navMenu">Menu</a>
+			<a href="about.html" class="mobile-nav__link" data-i18n="navAbout"
+				>About</a
+			>
+			<a href="contact.html" class="mobile-nav__link" data-i18n="navContact"
+				>Contact</a
+			>
+			<a
+				href="reservations.html"
+				class="mobile-nav__link"
+				data-i18n="navReservations"
+				>Reservations</a
+			>
 		</div>
 
 		<!-- Hero Section -->
@@ -134,25 +169,33 @@
 			<div class="hero__content reveal">
 				<span class="hero__badge">
 					<span>✨</span>
-					Award-Winning Cuisine
+					<span data-i18n="heroBadge">Award-Winning Cuisine</span>
 				</span>
-				<h1 class="hero__title">A Culinary Journey Awaits</h1>
-				<p class="hero__subtitle">
+				<h1 class="hero__title" data-i18n="heroTitle">
+					A Culinary Journey Awaits
+				</h1>
+				<p class="hero__subtitle" data-i18n="heroSubtitle">
 					Discover the art of fine dining where every dish tells a story. Fresh
 					ingredients, masterful techniques, unforgettable flavors.
 				</p>
 				<div class="hero__actions">
-					<a href="menu.html" class="btn btn--primary btn--large"
+					<a
+						href="menu.html"
+						class="btn btn--primary btn--large"
+						data-i18n="btnExploreMenu"
 						>Explore Menu</a
 					>
-					<a href="reservations.html" class="btn btn--secondary btn--large"
+					<a
+						href="reservations.html"
+						class="btn btn--secondary btn--large"
+						data-i18n="btnReserveTable"
 						>Reserve a Table</a
 					>
 				</div>
 			</div>
 
 			<div class="hero__scroll">
-				<span>Scroll to discover</span>
+				<span data-i18n="scrollDiscover">Scroll to discover</span>
 				<svg
 					width="24"
 					height="24"
@@ -170,9 +213,16 @@
 		<section class="section home-featured" id="featured">
 			<div class="container">
 				<div class="section-header reveal">
-					<span class="section-header__badge">Our Specialties</span>
-					<h2 class="section-header__title">Signature Dishes</h2>
-					<p class="section-header__description">
+					<span class="section-header__badge" data-i18n="featuredBadge"
+						>Our Specialties</span
+					>
+					<h2 class="section-header__title" data-i18n="featuredTitle">
+						Signature Dishes
+					</h2>
+					<p
+						class="section-header__description"
+						data-i18n="featuredDescription"
+					>
 						Handcrafted with passion and precision, our signature dishes
 						represent the pinnacle of culinary excellence.
 					</p>
@@ -186,18 +236,29 @@
 								alt="Wagyu Beef Tenderloin"
 								loading="lazy"
 							/>
-							<span class="card__badge">Chef's Special</span>
+							<span class="card__badge" data-i18n="dishBadgeChef"
+								>Chef's Special</span
+							>
 						</div>
 						<div class="card__content">
-							<span class="card__category">Main Course</span>
-							<h3 class="card__title">Wagyu Beef Tenderloin</h3>
-							<p class="card__description">
+							<span class="card__category" data-i18n="dishCategoryMain"
+								>Main Course</span
+							>
+							<h3 class="card__title" data-i18n="dishWagyuTitle">
+								Wagyu Beef Tenderloin
+							</h3>
+							<p class="card__description" data-i18n="dishWagyuDescription">
 								A5 Japanese Wagyu, truffle jus, seasonal vegetables, and potato
 								mousseline.
 							</p>
 							<div class="card__footer">
 								<span class="card__price">$85</span>
-								<a href="menu.html" class="btn btn--outline">View Details</a>
+								<a
+									href="menu.html"
+									class="btn btn--outline"
+									data-i18n="btnViewDetails"
+									>View Details</a
+								>
 							</div>
 						</div>
 					</article>
@@ -209,18 +270,29 @@
 								alt="Lobster Thermidor"
 								loading="lazy"
 							/>
-							<span class="card__badge">Popular</span>
+							<span class="card__badge" data-i18n="dishBadgePopular"
+								>Popular</span
+							>
 						</div>
 						<div class="card__content">
-							<span class="card__category">Seafood</span>
-							<h3 class="card__title">Lobster Thermidor</h3>
-							<p class="card__description">
+							<span class="card__category" data-i18n="dishCategorySeafood"
+								>Seafood</span
+							>
+							<h3 class="card__title" data-i18n="dishLobsterTitle">
+								Lobster Thermidor
+							</h3>
+							<p class="card__description" data-i18n="dishLobsterDescription">
 								Maine lobster, cognac cream sauce, gruyère gratin, with herb
 								butter.
 							</p>
 							<div class="card__footer">
 								<span class="card__price">$72</span>
-								<a href="menu.html" class="btn btn--outline">View Details</a>
+								<a
+									href="menu.html"
+									class="btn btn--outline"
+									data-i18n="btnViewDetails"
+									>View Details</a
+								>
 							</div>
 						</div>
 					</article>
@@ -234,21 +306,33 @@
 							/>
 						</div>
 						<div class="card__content">
-							<span class="card__category">Dessert</span>
-							<h3 class="card__title">Chocolate Symphony</h3>
-							<p class="card__description">
+							<span class="card__category" data-i18n="dishCategoryDessert"
+								>Dessert</span
+							>
+							<h3 class="card__title" data-i18n="dishChocolateTitle">
+								Chocolate Symphony
+							</h3>
+							<p class="card__description" data-i18n="dishChocolateDescription">
 								Valrhona chocolate fondant, salted caramel, vanilla ice cream.
 							</p>
 							<div class="card__footer">
 								<span class="card__price">$24</span>
-								<a href="menu.html" class="btn btn--outline">View Details</a>
+								<a
+									href="menu.html"
+									class="btn btn--outline"
+									data-i18n="btnViewDetails"
+									>View Details</a
+								>
 							</div>
 						</div>
 					</article>
 				</div>
 
 				<div class="text-center" style="margin-top: var(--space-12)">
-					<a href="menu.html" class="btn btn--primary btn--large"
+					<a
+						href="menu.html"
+						class="btn btn--primary btn--large"
+						data-i18n="btnViewFullMenu"
 						>View Full Menu</a
 					>
 				</div>
@@ -267,23 +351,30 @@
 						/>
 					</div>
 					<div>
-						<span class="section-header__badge">Our Story</span>
-						<h2 style="margin-bottom: var(--space-4)">
+						<span class="section-header__badge" data-i18n="aboutBadge"
+							>Our Story</span
+						>
+						<h2 style="margin-bottom: var(--space-4)" data-i18n="aboutTitle">
 							Where Passion Meets Plate
 						</h2>
-						<p style="margin-bottom: var(--space-6)">
+						<p style="margin-bottom: var(--space-6)" data-i18n="aboutPara1">
 							Founded in 2010, Bella Vista has been a beacon of culinary
 							excellence in the heart of the city. Our philosophy is simple:
 							source the finest ingredients, treat them with respect, and create
 							dishes that inspire joy.
 						</p>
-						<p style="margin-bottom: var(--space-8)">
+						<p style="margin-bottom: var(--space-8)" data-i18n="aboutPara2">
 							Executive Chef Marco Rossi leads our talented team with over 20
 							years of experience from Michelin-starred kitchens across Europe.
 							Every dish that leaves our kitchen is a testament to his vision
 							and our commitment to perfection.
 						</p>
-						<a href="about.html" class="btn btn--primary">Read Our Story</a>
+						<a
+							href="about.html"
+							class="btn btn--primary"
+							data-i18n="btnReadStory"
+							>Read Our Story</a
+						>
 					</div>
 				</div>
 			</div>
@@ -295,21 +386,23 @@
 				<div class="stats reveal">
 					<div class="stat">
 						<div class="stat__number" data-counter="15" data-suffix="+">0</div>
-						<div class="stat__label">Years of Excellence</div>
+						<div class="stat__label" data-i18n="statYears">
+							Years of Excellence
+						</div>
 					</div>
 					<div class="stat">
 						<div class="stat__number" data-counter="50000" data-suffix="+">
 							0
 						</div>
-						<div class="stat__label">Happy Guests</div>
+						<div class="stat__label" data-i18n="statGuests">Happy Guests</div>
 					</div>
 					<div class="stat">
 						<div class="stat__number" data-counter="120" data-suffix="">0</div>
-						<div class="stat__label">Menu Items</div>
+						<div class="stat__label" data-i18n="statMenuItems">Menu Items</div>
 					</div>
 					<div class="stat">
 						<div class="stat__number" data-counter="25" data-suffix="">0</div>
-						<div class="stat__label">Expert Chefs</div>
+						<div class="stat__label" data-i18n="statChefs">Expert Chefs</div>
 					</div>
 				</div>
 			</div>
@@ -319,13 +412,17 @@
 		<section class="section" id="testimonials">
 			<div class="container">
 				<div class="section-header reveal">
-					<span class="section-header__badge">Testimonials</span>
-					<h2 class="section-header__title">What Our Guests Say</h2>
+					<span class="section-header__badge" data-i18n="testimonialsBadge"
+						>Testimonials</span
+					>
+					<h2 class="section-header__title" data-i18n="testimonialsTitle">
+						What Our Guests Say
+					</h2>
 				</div>
 
 				<div class="grid grid--3 reveal">
 					<div class="testimonial hover-lift">
-						<p class="testimonial__quote">
+						<p class="testimonial__quote" data-i18n="testimonial1Quote">
 							"An extraordinary dining experience. The attention to detail in
 							every dish is remarkable. Bella Vista has become our go-to for
 							special occasions."
@@ -339,14 +436,18 @@
 								/>
 							</div>
 							<div class="testimonial__info">
-								<div class="testimonial__name">James Wilson</div>
-								<div class="testimonial__role">Food Critic</div>
+								<div class="testimonial__name" data-i18n="testimonial1Name">
+									James Wilson
+								</div>
+								<div class="testimonial__role" data-i18n="testimonial1Role">
+									Food Critic
+								</div>
 							</div>
 						</div>
 					</div>
 
 					<div class="testimonial hover-lift">
-						<p class="testimonial__quote">
+						<p class="testimonial__quote" data-i18n="testimonial2Quote">
 							"From the warm welcome to the exquisite dessert, every moment was
 							perfect. The sommelier's wine pairings elevated the entire
 							experience."
@@ -360,14 +461,18 @@
 								/>
 							</div>
 							<div class="testimonial__info">
-								<div class="testimonial__name">Sarah Chen</div>
-								<div class="testimonial__role">Regular Guest</div>
+								<div class="testimonial__name" data-i18n="testimonial2Name">
+									Sarah Chen
+								</div>
+								<div class="testimonial__role" data-i18n="testimonial2Role">
+									Regular Guest
+								</div>
 							</div>
 						</div>
 					</div>
 
 					<div class="testimonial hover-lift">
-						<p class="testimonial__quote">
+						<p class="testimonial__quote" data-i18n="testimonial3Quote">
 							"The chef's tasting menu was a journey of flavors I'll never
 							forget. Worth every penny for the quality and creativity."
 						</p>
@@ -380,8 +485,12 @@
 								/>
 							</div>
 							<div class="testimonial__info">
-								<div class="testimonial__name">Michael Brown</div>
-								<div class="testimonial__role">Anniversary Dinner</div>
+								<div class="testimonial__name" data-i18n="testimonial3Name">
+									Michael Brown
+								</div>
+								<div class="testimonial__role" data-i18n="testimonial3Role">
+									Anniversary Dinner
+								</div>
 							</div>
 						</div>
 					</div>
@@ -393,14 +502,17 @@
 		<section class="section">
 			<div class="container">
 				<div class="cta-section reveal">
-					<h2 class="cta-section__title">
+					<h2 class="cta-section__title" data-i18n="ctaTitle">
 						Ready for an Unforgettable Evening?
 					</h2>
-					<p class="cta-section__description">
+					<p class="cta-section__description" data-i18n="ctaDescription">
 						Reserve your table now and let us create a memorable dining
 						experience for you and your loved ones.
 					</p>
-					<a href="reservations.html" class="btn btn--primary btn--large"
+					<a
+						href="reservations.html"
+						class="btn btn--primary btn--large"
+						data-i18n="btnMakeReservation"
 						>Make a Reservation</a
 					>
 				</div>
@@ -416,7 +528,7 @@
 							<span>🍽️</span>
 							Bella Vista
 						</div>
-						<p class="footer__description">
+						<p class="footer__description" data-i18n="footerDescription">
 							Experience the art of fine dining in an atmosphere of elegance and
 							warmth. Every visit is a celebration.
 						</p>
@@ -461,36 +573,64 @@
 					</div>
 
 					<div>
-						<h4 class="footer__heading">Quick Links</h4>
+						<h4 class="footer__heading" data-i18n="footerQuickLinks">
+							Quick Links
+						</h4>
 						<nav class="footer__links">
-							<a href="index.html" class="footer__link">Home</a>
-							<a href="menu.html" class="footer__link">Our Menu</a>
-							<a href="about.html" class="footer__link">About Us</a>
-							<a href="reservations.html" class="footer__link">Reservations</a>
-							<a href="contact.html" class="footer__link">Contact</a>
+							<a href="index.html" class="footer__link" data-i18n="navHome"
+								>Home</a
+							>
+							<a href="menu.html" class="footer__link" data-i18n="footerOurMenu"
+								>Our Menu</a
+							>
+							<a
+								href="about.html"
+								class="footer__link"
+								data-i18n="footerAboutUs"
+								>About Us</a
+							>
+							<a
+								href="reservations.html"
+								class="footer__link"
+								data-i18n="navReservations"
+								>Reservations</a
+							>
+							<a href="contact.html" class="footer__link" data-i18n="navContact"
+								>Contact</a
+							>
 						</nav>
 					</div>
 
 					<div>
-						<h4 class="footer__heading">Opening Hours</h4>
+						<h4 class="footer__heading" data-i18n="footerOpeningHours">
+							Opening Hours
+						</h4>
 						<div class="hours-list">
 							<div class="hours-item">
-								<span class="hours-item__day">Mon - Thu</span>
+								<span class="hours-item__day" data-i18n="footerMonThu"
+									>Mon - Thu</span
+								>
 								<span class="hours-item__time">5:00 PM - 10:00 PM</span>
 							</div>
 							<div class="hours-item">
-								<span class="hours-item__day">Fri - Sat</span>
+								<span class="hours-item__day" data-i18n="footerFriSat"
+									>Fri - Sat</span
+								>
 								<span class="hours-item__time">5:00 PM - 11:00 PM</span>
 							</div>
 							<div class="hours-item">
-								<span class="hours-item__day">Sunday</span>
+								<span class="hours-item__day" data-i18n="footerSunday"
+									>Sunday</span
+								>
 								<span class="hours-item__time">4:00 PM - 9:00 PM</span>
 							</div>
 						</div>
 					</div>
 
 					<div>
-						<h4 class="footer__heading">Contact Us</h4>
+						<h4 class="footer__heading" data-i18n="footerContactUs">
+							Contact Us
+						</h4>
 						<div class="footer__contact-item">
 							<svg
 								width="18"
@@ -540,19 +680,23 @@
 				</div>
 
 				<div class="footer__bottom">
-					<p class="footer__copyright">
+					<p class="footer__copyright" data-i18n="footerCopyright">
 						© 2026 Bella Vista. All rights reserved.
 					</p>
 					<div class="footer__legal">
-						<a href="#" class="footer__legal-link">Privacy Policy</a>
-						<a href="#" class="footer__legal-link">Terms of Service</a>
+						<a href="#" class="footer__legal-link" data-i18n="footerPrivacy"
+							>Privacy Policy</a
+						>
+						<a href="#" class="footer__legal-link" data-i18n="footerTerms"
+							>Terms of Service</a
+						>
 					</div>
 				</div>
 			</div>
 		</footer>
 
-		<!-- Scripts -->
-		<script src="js/main.js"></script>
+		<!-- Scripts (ES Modules for i18n support) -->
+		<script type="module" src="js/main.js"></script>
 		<script src="js/animations.js"></script>
 	</body>
 </html>

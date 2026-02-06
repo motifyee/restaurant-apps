@@ -20,6 +20,7 @@
 	transition: all var(--transition-normal);
 	font-size: var(--text-sm);
 	font-weight: 500;
+	flex-shrink: 0;
 }
 
 .language-toggle:hover {
@@ -45,13 +46,18 @@
 /* Mobile: Icon only */
 @media (max-width: 768px) {
 	.language-toggle {
-		padding: var(--space-2);
-		min-width: 40px;
+		padding: var(--space-1);
+		min-width: 36px;
+		height: 36px;
 		justify-content: center;
 	}
 
 	.language-toggle__text {
 		display: none;
+	}
+
+	.language-toggle__icon {
+		font-size: 1rem;
 	}
 }
 
@@ -199,9 +205,10 @@ html[dir='rtl'] .about-story {
    Arabic Font Optimization
    ============================================ */
 
-/* Use system Arabic fonts for better readability */
+/* Use Tajawal font for Arabic text */
 html[lang='ar'] body {
-	font-family: 'Segoe UI', Tahoma, 'Arial', 'Noto Sans Arabic', sans-serif;
+	font-family:
+		'Tajawal', 'Segoe UI', Tahoma, 'Arial', 'Noto Sans Arabic', sans-serif;
 }
 
 /* Adjust font sizes for Arabic (typically needs slightly larger size) */

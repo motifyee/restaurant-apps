@@ -5,6 +5,9 @@
  * Add any page-specific overrides here.
  */
 
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+
 /* ========================================
    CSS MODULE IMPORTS
    ======================================== */
@@ -34,11 +37,19 @@
 
 .menu-categories {
 	position: sticky;
-	top: 80px;
+	top: 72px; /* Match navbar height when scrolled */
 	z-index: var(--z-raised);
 	background: var(--bg-primary);
-	padding: var(--space-4) 0;
+	padding: var(--space-3) 0; /* Reduced padding for more compact look */
 	border-bottom: 1px solid var(--border-color);
+	margin-top: -1px; /* Remove gap by overlapping border */
+}
+
+@media (max-width: 767px) {
+	.menu-categories {
+		top: 64px; /* Adjust for smaller navbar on mobile */
+		padding: var(--space-2) 0; /* Even more compact on mobile */
+	}
 }
 
 .menu-items {

@@ -34,6 +34,12 @@
 	gap: var(--space-8);
 }
 
+@media (max-width: 767px) {
+	.navbar__inner {
+		gap: var(--space-2);
+	}
+}
+
 .navbar__logo {
 	display: flex;
 	align-items: center;
@@ -43,6 +49,14 @@
 	font-weight: var(--font-bold);
 	color: var(--text-primary);
 	text-decoration: none;
+	flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+	.navbar__logo {
+		font-size: var(--text-base);
+		gap: var(--space-2);
+	}
 }
 
 .navbar__logo-icon {
@@ -54,6 +68,14 @@
 	background: var(--gradient-accent);
 	border-radius: var(--radius-lg);
 	font-size: var(--text-lg);
+}
+
+@media (max-width: 767px) {
+	.navbar__logo-icon {
+		width: 32px;
+		height: 32px;
+		font-size: var(--text-base);
+	}
 }
 
 .navbar__menu {
@@ -109,6 +131,18 @@
 	}
 }
 
+/* Navbar actions wrapper - reduce gap on mobile */
+.navbar__inner > div[style*='display: flex'] {
+	display: flex;
+	align-items: center;
+	gap: var(--space-4);
+}
+
+@media (max-width: 767px) {
+	.navbar__inner > div[style*='display: flex'] {
+		gap: var(--space-2);
+	}
+}
 /* Mobile Menu Toggle */
 .navbar__toggle {
 	display: flex;
@@ -165,6 +199,15 @@
 	border-radius: var(--radius-full);
 	cursor: pointer;
 	transition: all var(--transition-fast);
+	flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+	.theme-toggle {
+		width: 36px;
+		height: 36px;
+		padding: var(--space-1);
+	}
 }
 
 .theme-toggle:hover {
@@ -386,6 +429,12 @@
 	max-width: 800px;
 }
 
+@media (max-width: 767px) {
+	.hero__content {
+		padding-top: calc(var(--space-16) + 64px); /* Add space for navbar */
+	}
+}
+
 .hero__badge {
 	display: inline-flex;
 	align-items: center;
@@ -425,6 +474,14 @@
 	flex-wrap: wrap;
 	gap: var(--space-4);
 	justify-content: center;
+	margin-bottom: var(--space-16);
+}
+
+@media (max-width: 767px) {
+	.hero__actions {
+		margin-bottom: var(--space-12);
+		gap: var(--space-3);
+	}
 }
 
 .hero__scroll {
@@ -439,6 +496,14 @@
 	color: var(--text-muted);
 	font-size: var(--text-sm);
 	animation: bounce 2s infinite;
+}
+
+@media (max-width: 767px) {
+	.hero__scroll {
+		bottom: var(--space-4);
+		font-size: var(--text-xs);
+		opacity: 0.7;
+	}
 }
 
 @keyframes bounce {
@@ -983,8 +1048,8 @@
 	display: flex;
 	gap: var(--space-2);
 	overflow-x: auto;
-	padding-bottom: var(--space-2);
-	margin-bottom: var(--space-8);
+	padding-bottom: 0; /* Remove extra padding */
+	margin-bottom: 0; /* Remove excessive margin */
 	scrollbar-width: none;
 }
 

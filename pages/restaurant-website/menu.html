@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,14 +43,37 @@
 				</a>
 
 				<div class="navbar__menu">
-					<a href="index.html" class="navbar__link">Home</a>
-					<a href="menu.html" class="navbar__link active">Menu</a>
-					<a href="about.html" class="navbar__link">About</a>
-					<a href="contact.html" class="navbar__link">Contact</a>
-					<a href="reservations.html" class="navbar__link">Reservations</a>
+					<a href="index.html" class="navbar__link" data-i18n="navHome">Home</a>
+					<a href="menu.html" class="navbar__link active" data-i18n="navMenu"
+						>Menu</a
+					>
+					<a href="about.html" class="navbar__link" data-i18n="navAbout"
+						>About</a
+					>
+					<a href="contact.html" class="navbar__link" data-i18n="navContact"
+						>Contact</a
+					>
+					<a
+						href="reservations.html"
+						class="navbar__link"
+						data-i18n="navReservations"
+						>Reservations</a
+					>
 				</div>
 
 				<div style="display: flex; align-items: center; gap: var(--space-4)">
+					<!-- Language Switcher -->
+					<button
+						class="language-toggle"
+						id="language-toggle"
+						aria-label="Switch language"
+						title="Toggle language"
+					>
+						<span class="language-toggle__icon">🇸🇦</span>
+						<span class="language-toggle__text">عربي</span>
+					</button>
+
+					<!-- Theme Toggle -->
 					<button
 						class="theme-toggle navbar__theme-toggle"
 						id="theme-toggle"
@@ -112,11 +135,20 @@
 
 		<!-- Mobile Navigation -->
 		<div class="mobile-nav" id="mobile-nav">
-			<a href="index.html" class="mobile-nav__link">Home</a>
-			<a href="menu.html" class="mobile-nav__link">Menu</a>
-			<a href="about.html" class="mobile-nav__link">About</a>
-			<a href="contact.html" class="mobile-nav__link">Contact</a>
-			<a href="reservations.html" class="mobile-nav__link">Reservations</a>
+			<a href="index.html" class="mobile-nav__link" data-i18n="navHome">Home</a>
+			<a href="menu.html" class="mobile-nav__link" data-i18n="navMenu">Menu</a>
+			<a href="about.html" class="mobile-nav__link" data-i18n="navAbout"
+				>About</a
+			>
+			<a href="contact.html" class="mobile-nav__link" data-i18n="navContact"
+				>Contact</a
+			>
+			<a
+				href="reservations.html"
+				class="mobile-nav__link"
+				data-i18n="navReservations"
+				>Reservations</a
+			>
 		</div>
 
 		<!-- Menu Hero -->
@@ -578,7 +610,7 @@
 							<div class="menu-card__content">
 								<div class="menu-card__header">
 									<h3 class="menu-card__title">Sommelier's Selection</h3>
-									<span class="menu-card__price">From $15</span>
+									<span class="menu-card__price">$15</span>
 								</div>
 								<p class="menu-card__description">
 									Curated wines by the glass from our extensive cellar. Ask your

@@ -20,7 +20,7 @@ import { ar } from './ar.js';
 class I18n {
 	constructor() {
 		this.translations = { en, ar };
-		this.currentLang = this.getStoredLanguage() || 'en';
+		this.currentLang = this.getStoredLanguage() || 'ar';
 		this.listeners = [];
 	}
 

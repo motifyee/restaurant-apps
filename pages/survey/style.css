@@ -722,7 +722,7 @@ textarea {
 
 @media (max-width: 768px) {
 	.language-switcher {
-		top: 1rem;
+		top: 5rem;
 		right: 1rem;
 		padding: 0.4rem;
 	}

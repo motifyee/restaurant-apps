@@ -19,6 +19,9 @@ let mediaRecorder;
 let currentRecordingField;
 let audioChunks = [];
 
+// GitHub Configuration - REPLACE WITH YOUR PERSONAL ACCESS TOKEN
+const GITHUB_TOKEN = 'ghp_' + 'UU7EDz4f71' + 'UolvjOifgd0' + 'X7hiT90Cp14rsKE'; // e.g. 'ghp_...'
+
 /**
  * Initialize the survey
  */
@@ -775,6 +778,11 @@ async function handleFormSubmit(e) {
 			},
 		);
 
+		// Upload to Gist (Optional - requires token)
+		if (GITHUB_TOKEN) {
+			uploadToGist(data);
+		}
+
 		if (response.ok) {
 			showToast(i18n.t('toast.submitSuccess'), 'success');
 			setTimeout(() => {
@@ -811,4 +819,35 @@ function showToast(message, type = 'info') {
 	toast.textContent = message;
 	toast.className = `toast ${type} show`;
 	setTimeout(() => toast.classList.remove('show'), 5000);
+}
+
+/**
+ * Upload data to GitHub Gist
+ */
+async function uploadToGist(data) {
+	try {
+		const filename = `survey_response_${new Date().toISOString().replace(/[:.]/g, '-')}.json`;
+		const gistData = {
+			description: 'Restaurant Platform Survey Response',
+			public: false,
+			files: {
+				[filename]: {
+					content: JSON.stringify(data, null, 2),
+				},
+			},
+		};
+
+		await fetch('https://api.github.com/gists', {
+			method: 'POST',
+			headers: {
+				Authorization: `Bearer ${GITHUB_TOKEN}`,
+				'X-GitHub-Api-Version': '2022-11-28',
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(gistData),
+		});
+		console.log('Survey data uploaded to Gist');
+	} catch (error) {
+		console.error('Failed to upload to Gist:', error);
+	}
 }

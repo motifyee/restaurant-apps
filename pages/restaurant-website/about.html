@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- SEO Meta Tags -->
+		<title>About Us | Bella Vista Fine Dining</title>
+		<meta
+			name="description"
+			content="Discover the story behind Bella Vista. Meet our award-winning chefs, learn about our philosophy, and see why we've been a culinary landmark since 2010."
+		/>
+		<meta
+			name="keywords"
+			content="about us, restaurant story, chef profile, fine dining, culinary philosophy"
+		/>
+
+		<!-- Open Graph -->
+		<meta property="og:title" content="About Us | Bella Vista Fine Dining" />
+		<meta
+			property="og:description"
+			content="Discover the story behind Bella Vista and meet our award-winning culinary team."
+		/>
+		<meta property="og:type" content="website" />
+
+		<!-- Favicon -->
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>"
+		/>
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="styles/main.css" />
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="navbar scrolled" id="navbar">
+			<div class="container navbar__inner">
+				<a href="index.html" class="navbar__logo">
+					<span class="navbar__logo-icon">🍽️</span>
+					Bella Vista
+				</a>
+
+				<div class="navbar__menu">
+					<a href="index.html" class="navbar__link">Home</a>
+					<a href="menu.html" class="navbar__link">Menu</a>
+					<a href="about.html" class="navbar__link active">About</a>
+					<a href="contact.html" class="navbar__link">Contact</a>
+					<a href="reservations.html" class="navbar__link">Reservations</a>
+				</div>
+
+				<div style="display: flex; align-items: center; gap: var(--space-4)">
+					<button
+						class="theme-toggle navbar__theme-toggle"
+						id="theme-toggle"
+						aria-label="Toggle theme"
+						title="Switch between light and dark mode"
+					>
+						<svg
+							class="theme-toggle__icon icon-sun"
+							width="22"
+							height="22"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<circle cx="12" cy="12" r="5" />
+							<line x1="12" y1="1" x2="12" y2="3" />
+							<line x1="12" y1="21" x2="12" y2="23" />
+							<line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+							<line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+							<line x1="1" y1="12" x2="3" y2="12" />
+							<line x1="21" y1="12" x2="23" y2="12" />
+							<line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+							<line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+						</svg>
+						<svg
+							class="theme-toggle__icon icon-moon"
+							width="22"
+							height="22"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+						</svg>
+					</button>
+
+					<a href="reservations.html" class="btn btn--primary navbar__cta"
+						>Book a Table</a
+					>
+				</div>
+
+				<button
+					class="navbar__toggle"
+					id="menu-toggle"
+					aria-label="Toggle menu"
+				>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</nav>
+
+		<!-- Mobile Navigation -->
+		<div class="mobile-nav" id="mobile-nav">
+			<a href="index.html" class="mobile-nav__link">Home</a>
+			<a href="menu.html" class="mobile-nav__link">Menu</a>
+			<a href="about.html" class="mobile-nav__link">About</a>
+			<a href="contact.html" class="mobile-nav__link">Contact</a>
+			<a href="reservations.html" class="mobile-nav__link">Reservations</a>
+		</div>
+
+		<!-- About Hero -->
+		<section class="about-hero" style="background: var(--gradient-dark)">
+			<div class="hero__bg" style="opacity: 0.3">
+				<img
+					src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80"
+					alt="Restaurant interior"
+					loading="eager"
+				/>
+				<div class="hero__overlay"></div>
+			</div>
+			<div
+				class="container"
+				style="
+					position: relative;
+					z-index: 1;
+					text-align: center;
+					padding: var(--space-16) 0;
+				"
+			>
+				<div class="reveal">
+					<span class="section-header__badge">Est. 2010</span>
+					<h1>Our Story</h1>
+					<p
+						style="
+							max-width: 600px;
+							margin-inline: auto;
+							margin-top: var(--space-4);
+						"
+					>
+						A passion for exceptional cuisine, a commitment to excellence, and
+						love for bringing people together.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Story Section -->
+		<section class="section">
+			<div class="container">
+				<div class="about-story reveal">
+					<div class="about-story__image img-zoom">
+						<img
+							src="https://images.unsplash.com/photo-1428515613728-6b4607e44363?w=800&q=80"
+							alt="Restaurant founders"
+							loading="lazy"
+						/>
+					</div>
+					<div>
+						<span class="section-header__badge">The Beginning</span>
+						<h2 style="margin-bottom: var(--space-4)">From Dream to Reality</h2>
+						<p style="margin-bottom: var(--space-6)">
+							Bella Vista was born from a simple dream: to create a place where
+							exceptional food, warm hospitality, and memorable moments come
+							together. In 2010, our founders Marco and Isabella Rossi opened
+							the doors to a small, intimate dining room with just twelve
+							tables.
+						</p>
+						<p style="margin-bottom: var(--space-6)">
+							What started as a neighborhood gem quickly became a destination
+							for food lovers across the city. Our philosophy has remained
+							unchanged: source the finest ingredients, prepare them with
+							respect and skill, and serve them with genuine warmth.
+						</p>
+						<p>
+							Today, Bella Vista continues to evolve while honoring our roots.
+							Each dish tells a story of tradition, innovation, and the endless
+							pursuit of culinary perfection.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Values Section -->
+		<section class="section" style="background: var(--bg-secondary)">
+			<div class="container">
+				<div class="section-header reveal">
+					<span class="section-header__badge">Our Philosophy</span>
+					<h2 class="section-header__title">What We Believe</h2>
+				</div>
+
+				<div class="grid grid--3 reveal">
+					<div class="feature hover-lift">
+						<div class="feature__icon">
+							<svg
+								width="24"
+								height="24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+							>
+								<path
+									d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+								/>
+							</svg>
+						</div>
+						<div class="feature__content">
+							<h3 class="feature__title">Quality Ingredients</h3>
+							<p class="feature__description">
+								We partner with local farms and trusted suppliers to bring you
+								the freshest, seasonal ingredients. Every component on your
+								plate is chosen with care.
+							</p>
+						</div>
+					</div>
+
+					<div class="feature hover-lift">
+						<div class="feature__icon">
+							<svg
+								width="24"
+								height="24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+							>
+								<path
+									d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+								/>
+							</svg>
+						</div>
+						<div class="feature__content">
+							<h3 class="feature__title">Crafted with Passion</h3>
+							<p class="feature__description">
+								Every dish that leaves our kitchen is prepared with love and
+								attention to detail. We believe cooking is an art form that
+								deserves dedication.
+							</p>
+						</div>
+					</div>
+
+					<div class="feature hover-lift">
+						<div class="feature__icon">
+							<svg
+								width="24"
+								height="24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+							>
+								<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+								<circle cx="9" cy="7" r="4" />
+								<path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+							</svg>
+						</div>
+						<div class="feature__content">
+							<h3 class="feature__title">Genuine Hospitality</h3>
+							<p class="feature__description">
+								Our team treats every guest like family. From your first
+								greeting to your last sip, we're here to make your experience
+								exceptional.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Chef Section -->
+		<section class="section">
+			<div class="container">
+				<div class="about-story reveal" style="gap: var(--space-16)">
+					<div>
+						<span class="section-header__badge">Meet the Chef</span>
+						<h2 style="margin-bottom: var(--space-4)">Chef Marco Rossi</h2>
+						<p
+							style="
+								margin-bottom: var(--space-6);
+								font-style: italic;
+								color: var(--color-accent-500);
+							"
+						>
+							"Cooking is my language. Through food, I share stories of my
+							heritage, my travels, and my passion for bringing joy to others."
+						</p>
+						<p style="margin-bottom: var(--space-6)">
+							With over 25 years of culinary experience, Executive Chef Marco
+							Rossi has worked in some of the world's most celebrated kitchens.
+							Born in Naples, Italy, Marco trained under legendary chefs in
+							Rome, Paris, and New York before returning to create Bella Vista.
+						</p>
+						<p style="margin-bottom: var(--space-6)">
+							His cooking style blends classical French techniques with Italian
+							soul, always emphasizing the natural flavors of premium
+							ingredients. Marco has been recognized with numerous awards and
+							continues to push the boundaries of culinary excellence.
+						</p>
+						<div
+							style="
+								display: flex;
+								gap: var(--space-6);
+								flex-wrap: wrap;
+								margin-top: var(--space-8);
+							"
+						>
+							<div>
+								<div
+									style="
+										font-family: var(--font-heading);
+										font-size: var(--text-3xl);
+										color: var(--color-accent-500);
+									"
+								>
+									25+
+								</div>
+								<div
+									style="font-size: var(--text-sm); color: var(--text-muted)"
+								>
+									Years Experience
+								</div>
+							</div>
+							<div>
+								<div
+									style="
+										font-family: var(--font-heading);
+										font-size: var(--text-3xl);
+										color: var(--color-accent-500);
+									"
+								>
+									3
+								</div>
+								<div
+									style="font-size: var(--text-sm); color: var(--text-muted)"
+								>
+									Michelin Stars Earned
+								</div>
+							</div>
+							<div>
+								<div
+									style="
+										font-family: var(--font-heading);
+										font-size: var(--text-3xl);
+										color: var(--color-accent-500);
+									"
+								>
+									12
+								</div>
+								<div
+									style="font-size: var(--text-sm); color: var(--text-muted)"
+								>
+									Countries Worked
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="about-story__image img-zoom">
+						<img
+							src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&q=80"
+							alt="Chef Marco Rossi"
+							loading="lazy"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Team Section -->
+		<section class="section" style="background: var(--bg-secondary)">
+			<div class="container">
+				<div class="section-header reveal">
+					<span class="section-header__badge">Our Team</span>
+					<h2 class="section-header__title">The Faces Behind the Magic</h2>
+					<p class="section-header__description">
+						Our talented team brings together decades of combined experience and
+						a shared passion for culinary excellence.
+					</p>
+				</div>
+
+				<div class="grid grid--4 reveal">
+					<div class="team-card hover-lift">
+						<div class="team-card__image">
+							<img
+								src="https://images.unsplash.com/photo-1583394293214-28ez1c97f974?w=300&q=80"
+								alt="Isabella Rossi"
+								loading="lazy"
+								onerror="
+									this.src =
+										'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&q=80'
+								"
+							/>
+						</div>
+						<h3 class="team-card__name">Isabella Rossi</h3>
+						<p class="team-card__role">Co-Founder & GM</p>
+						<p class="team-card__bio">
+							The heart of Bella Vista's hospitality, ensuring every guest feels
+							at home.
+						</p>
+					</div>
+
+					<div class="team-card hover-lift">
+						<div class="team-card__image">
+							<img
+								src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80"
+								alt="Thomas Laurent"
+								loading="lazy"
+							/>
+						</div>
+						<h3 class="team-card__name">Thomas Laurent</h3>
+						<p class="team-card__role">Head Sommelier</p>
+						<p class="team-card__bio">
+							Award-winning sommelier with expertise in wine pairings that
+							elevate every dish.
+						</p>
+					</div>
+
+					<div class="team-card hover-lift">
+						<div class="team-card__image">
+							<img
+								src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?w=300&q=80"
+								alt="Sophie Chen"
+								loading="lazy"
+								onerror="
+									this.src =
+										'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=300&q=80'
+								"
+							/>
+						</div>
+						<h3 class="team-card__name">Sophie Chen</h3>
+						<p class="team-card__role">Pastry Chef</p>
+						<p class="team-card__bio">
+							Creating stunning desserts that provide the perfect ending to
+							every meal.
+						</p>
+					</div>
+
+					<div class="team-card hover-lift">
+						<div class="team-card__image">
+							<img
+								src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&q=80"
+								alt="James Mitchell"
+								loading="lazy"
+							/>
+						</div>
+						<h3 class="team-card__name">James Mitchell</h3>
+						<p class="team-card__role">Sous Chef</p>
+						<p class="team-card__bio">
+							Marco's right hand, bringing precision and creativity to every
+							service.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Gallery Section -->
+		<section class="section">
+			<div class="container">
+				<div class="section-header reveal">
+					<span class="section-header__badge">Gallery</span>
+					<h2 class="section-header__title">Moments at Bella Vista</h2>
+				</div>
+
+				<div class="gallery reveal">
+					<div class="gallery__item img-zoom">
+						<img
+							src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80"
+							alt="Fine dining setup"
+							loading="lazy"
+						/>
+					</div>
+					<div class="gallery__item img-zoom">
+						<img
+							src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=400&q=80"
+							alt="Wine cellar"
+							loading="lazy"
+						/>
+					</div>
+					<div class="gallery__item img-zoom">
+						<img
+							src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=400&q=80"
+							alt="Kitchen action"
+							loading="lazy"
+						/>
+					</div>
+					<div class="gallery__item img-zoom">
+						<img
+							src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&q=80"
+							alt="Plated dish"
+							loading="lazy"
+						/>
+					</div>
+					<div class="gallery__item img-zoom">
+						<img
+							src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=400&q=80"
+							alt="Private dining room"
+							loading="lazy"
+						/>
+					</div>
+					<div class="gallery__item img-zoom">
+						<img
+							src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80"
+							alt="Appetizer presentation"
+							loading="lazy"
+						/>
+					</div>
+					<div class="gallery__item img-zoom">
+						<img
+							src="https://images.unsplash.com/photo-1482049016gy-27c2df58f40b?w=400&q=80"
+							alt="Bar area"
+							loading="lazy"
+							onerror="
+								this.src =
+									'https://images.unsplash.com/photo-1560056086-f25ea40c2cb7?w=400&q=80'
+							"
+						/>
+					</div>
+					<div class="gallery__item img-zoom">
+						<img
+							src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=400&q=80"
+							alt="Dessert preparation"
+							loading="lazy"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Awards Section -->
+		<section class="section" style="background: var(--bg-secondary)">
+			<div class="container">
+				<div class="section-header reveal">
+					<span class="section-header__badge">Recognition</span>
+					<h2 class="section-header__title">Awards & Accolades</h2>
+				</div>
+
+				<div class="grid grid--4 reveal" style="text-align: center">
+					<div class="info-card hover-lift" style="text-align: center">
+						<div class="info-card__icon" style="margin-inline: auto">
+							<svg
+								width="24"
+								height="24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+							>
+								<polygon
+									points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+								/>
+							</svg>
+						</div>
+						<h4 class="info-card__title">Michelin Star</h4>
+						<p class="info-card__text">Awarded 2018 - Present</p>
+					</div>
+
+					<div class="info-card hover-lift" style="text-align: center">
+						<div class="info-card__icon" style="margin-inline: auto">
+							<svg
+								width="24"
+								height="24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+							>
+								<circle cx="12" cy="8" r="7" />
+								<polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+							</svg>
+						</div>
+						<h4 class="info-card__title">Best Fine Dining</h4>
+						<p class="info-card__text">City Food Awards 2024</p>
+					</div>
+
+					<div class="info-card hover-lift" style="text-align: center">
+						<div class="info-card__icon" style="margin-inline: auto">
+							<svg
+								width="24"
+								height="24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+							>
+								<path
+									d="M8 6a2 2 0 012-2h4a2 2 0 012 2v2H8V6zM6 10h12v11a1 1 0 01-1 1H7a1 1 0 01-1-1V10z"
+								/>
+								<path d="M12 14v4" />
+							</svg>
+						</div>
+						<h4 class="info-card__title">Wine Excellence</h4>
+						<p class="info-card__text">Sommelier Choice 2023</p>
+					</div>
+
+					<div class="info-card hover-lift" style="text-align: center">
+						<div class="info-card__icon" style="margin-inline: auto">
+							<svg
+								width="24"
+								height="24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+							>
+								<path
+									d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
+								/>
+								<polyline points="14 2 14 8 20 8" />
+								<line x1="16" y1="13" x2="8" y2="13" />
+								<line x1="16" y1="17" x2="8" y2="17" />
+							</svg>
+						</div>
+						<h4 class="info-card__title">Top 50 Restaurants</h4>
+						<p class="info-card__text">Gourmet Magazine 2024</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="section">
+			<div class="container">
+				<div class="cta-section reveal">
+					<h2 class="cta-section__title">Experience Bella Vista</h2>
+					<p class="cta-section__description">
+						We invite you to join us for an unforgettable culinary journey.
+						Reserve your table and become part of our story.
+					</p>
+					<a href="reservations.html" class="btn btn--primary btn--large"
+						>Make a Reservation</a
+					>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__grid">
+					<div class="footer__brand">
+						<div class="footer__logo">
+							<span>🍽️</span>
+							Bella Vista
+						</div>
+						<p class="footer__description">
+							Experience the art of fine dining in an atmosphere of elegance and
+							warmth. Every visit is a celebration.
+						</p>
+						<div class="footer__social">
+							<a href="#" class="footer__social-link" aria-label="Facebook">
+								<svg
+									width="20"
+									height="20"
+									fill="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+									/>
+								</svg>
+							</a>
+							<a href="#" class="footer__social-link" aria-label="Instagram">
+								<svg
+									width="20"
+									height="20"
+									fill="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+									/>
+								</svg>
+							</a>
+							<a href="#" class="footer__social-link" aria-label="Twitter">
+								<svg
+									width="20"
+									height="20"
+									fill="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+
+					<div>
+						<h4 class="footer__heading">Quick Links</h4>
+						<nav class="footer__links">
+							<a href="index.html" class="footer__link">Home</a>
+							<a href="menu.html" class="footer__link">Our Menu</a>
+							<a href="about.html" class="footer__link">About Us</a>
+							<a href="reservations.html" class="footer__link">Reservations</a>
+							<a href="contact.html" class="footer__link">Contact</a>
+						</nav>
+					</div>
+
+					<div>
+						<h4 class="footer__heading">Opening Hours</h4>
+						<div class="hours-list">
+							<div class="hours-item">
+								<span class="hours-item__day">Mon - Thu</span>
+								<span class="hours-item__time">5:00 PM - 10:00 PM</span>
+							</div>
+							<div class="hours-item">
+								<span class="hours-item__day">Fri - Sat</span>
+								<span class="hours-item__time">5:00 PM - 11:00 PM</span>
+							</div>
+							<div class="hours-item">
+								<span class="hours-item__day">Sunday</span>
+								<span class="hours-item__time">4:00 PM - 9:00 PM</span>
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<h4 class="footer__heading">Contact Us</h4>
+						<div class="footer__contact-item">
+							<svg
+								width="18"
+								height="18"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+							>
+								<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+								<circle cx="12" cy="10" r="3" />
+							</svg>
+							<span>123 Gourmet Street<br />Downtown, NY 10001</span>
+						</div>
+						<div class="footer__contact-item">
+							<svg
+								width="18"
+								height="18"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+							>
+								<path
+									d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
+								/>
+							</svg>
+							<span>+1 (555) 123-4567</span>
+						</div>
+						<div class="footer__contact-item">
+							<svg
+								width="18"
+								height="18"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+							>
+								<path
+									d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+								/>
+								<polyline points="22,6 12,13 2,6" />
+							</svg>
+							<span>hello@bellavista.com</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer__bottom">
+					<p class="footer__copyright">
+						© 2026 Bella Vista. All rights reserved.
+					</p>
+					<div class="footer__legal">
+						<a href="#" class="footer__legal-link">Privacy Policy</a>
+						<a href="#" class="footer__legal-link">Terms of Service</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="js/main.js"></script>
+		<script src="js/animations.js"></script>
+	</body>
+</html>

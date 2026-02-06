@@ -70,6 +70,55 @@ This system reduces staff load, improves order accuracy, increases throughput, a
 
 ---
 
+### 3. Walk-In Waitlist Mode (Virtual Queue for Tables)
+
+**Flow**
+
+1. Guest scans QR code at entrance/reception
+2. System shows:
+   - Current wait time
+   - Party size options
+   - Available table types (booth, patio, etc.)
+3. Guest joins virtual waitlist:
+   - Name and party size
+   - Phone number for notifications (optional)
+4. Guest receives:
+   - Queue position
+   - Estimated wait time
+   - Live updates as parties ahead are seated
+5. When table is ready:
+   - SMS/app notification
+   - 5-minute countdown to claim table
+6. Guest proceeds to host/entrance for seating
+
+**Waitlist Features**
+
+- Anonymous or phone-based tracking
+- Browse full menu while waiting
+- Pre-order meals (ready upon seating)
+- Estimated wait time accuracy
+- Cancel from waitlist anytime
+- Table type preferences (smoking/non-smoking, indoor/outdoor)
+- Party size merge (split groups can join together)
+
+**Guest Benefits While Waiting**
+
+- Browse menu and pre-order
+- View daily specials
+- Add name to waitlist remotely (before arriving)
+- Track live queue position
+- Receive SMS when approaching turn
+
+**Restaurant Benefits**
+
+- No physical lines blocking entrance
+- Better guest experience during peak hours
+- Pre-ordered meals start prep before seating
+- Accurate wait time predictions
+- Reduced walk-aways due to long visible lines
+
+---
+
 ## Guest-Facing Features
 
 ### Ordering & Menu

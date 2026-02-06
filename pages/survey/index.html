@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Restaurant Platform Survey</title>
+		<title id="page-title">Restaurant Platform Survey</title>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
 			rel="stylesheet"
@@ -11,25 +11,47 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
+		<!-- Language Switcher -->
+		<div class="language-switcher">
+			<button
+				id="lang-en"
+				class="lang-btn active"
+				data-lang="en"
+				aria-label="Switch to English"
+			>
+				EN
+			</button>
+			<button
+				id="lang-ar"
+				class="lang-btn"
+				data-lang="ar"
+				aria-label="Switch to Arabic"
+			>
+				عربي
+			</button>
+		</div>
+
 		<div class="hero">
 			<div class="hero-content">
-				<h1>🍽️ Restaurant Platform Survey</h1>
-				<p class="subtitle">
+				<h1 id="hero-title">🍽️ Restaurant Platform Survey</h1>
+				<p class="subtitle" id="hero-subtitle">
 					Help us build the perfect all-in-one solution for modern restaurants
 				</p>
 
 				<div class="value-props">
 					<div class="value-prop">
-						<h3>✨ Your Brand, Your Data</h3>
-						<p>No marketplaces. No hidden commissions.</p>
+						<h3 id="value-brand-title">✨ Your Brand, Your Data</h3>
+						<p id="value-brand-desc">No marketplaces. No hidden commissions.</p>
 					</div>
 					<div class="value-prop">
-						<h3>🚀 Unified Operations</h3>
-						<p>Orders, payments, CRM in one dashboard</p>
+						<h3 id="value-unified-title">🚀 Unified Operations</h3>
+						<p id="value-unified-desc">
+							Orders, payments, CRM in one dashboard
+						</p>
 					</div>
 					<div class="value-prop">
-						<h3>💰 Lower Costs</h3>
-						<p>Reduce dependency on high-fee platforms</p>
+						<h3 id="value-costs-title">💰 Lower Costs</h3>
+						<p id="value-costs-desc">Reduce dependency on high-fee platforms</p>
 					</div>
 				</div>
 			</div>
@@ -46,7 +68,7 @@
 		<div id="toast" class="toast"></div>
 
 		<script type="module">
-			import { initSurvey } from './survey.js';
+			import { initSurvey } from './survey-bilingual.js';
 			document.addEventListener('DOMContentLoaded', initSurvey);
 		</script>
 	</body>

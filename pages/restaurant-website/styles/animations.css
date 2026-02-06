@@ -1,0 +1,460 @@
+/**
+ * Restaurant Website - Animations & Transitions
+ * 
+ * Keyframe animations, scroll reveals, hover effects,
+ * and micro-interactions for enhanced UX.
+ */
+
+/* ========================================
+   KEYFRAME ANIMATIONS
+   ======================================== */
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(-30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeInRight {
+	from {
+		opacity: 0;
+		transform: translateX(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes scaleIn {
+	from {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes slideUp {
+	from {
+		transform: translateY(100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes pulse {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: -200% 0;
+	}
+	100% {
+		background-position: 200% 0;
+	}
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes glow {
+	0%,
+	100% {
+		box-shadow: 0 0 20px rgba(212, 164, 24, 0.3);
+	}
+	50% {
+		box-shadow: 0 0 40px rgba(212, 164, 24, 0.6);
+	}
+}
+
+/* ========================================
+   SCROLL REVEAL CLASSES
+   ======================================== */
+
+/* These classes are applied via JavaScript IntersectionObserver */
+.reveal {
+	opacity: 0;
+	transform: translateY(30px);
+	transition:
+		opacity 0.6s ease,
+		transform 0.6s ease;
+}
+
+.reveal.revealed {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.reveal--left {
+	opacity: 0;
+	transform: translateX(-30px);
+}
+
+.reveal--left.revealed {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.reveal--right {
+	opacity: 0;
+	transform: translateX(30px);
+}
+
+.reveal--right.revealed {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.reveal--scale {
+	opacity: 0;
+	transform: scale(0.9);
+}
+
+.reveal--scale.revealed {
+	opacity: 1;
+	transform: scale(1);
+}
+
+/* Stagger delays for child elements */
+.reveal--stagger > *:nth-child(1) {
+	transition-delay: 0.1s;
+}
+.reveal--stagger > *:nth-child(2) {
+	transition-delay: 0.2s;
+}
+.reveal--stagger > *:nth-child(3) {
+	transition-delay: 0.3s;
+}
+.reveal--stagger > *:nth-child(4) {
+	transition-delay: 0.4s;
+}
+.reveal--stagger > *:nth-child(5) {
+	transition-delay: 0.5s;
+}
+.reveal--stagger > *:nth-child(6) {
+	transition-delay: 0.6s;
+}
+
+/* ========================================
+   HOVER EFFECTS
+   ======================================== */
+
+.hover-lift {
+	transition:
+		transform var(--transition-base),
+		box-shadow var(--transition-base);
+}
+
+.hover-lift:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--shadow-xl);
+}
+
+.hover-glow {
+	transition: box-shadow var(--transition-base);
+}
+
+.hover-glow:hover {
+	box-shadow: var(--shadow-glow);
+}
+
+.hover-gold {
+	transition: box-shadow var(--transition-base);
+}
+
+.hover-gold:hover {
+	box-shadow: var(--shadow-gold);
+}
+
+.hover-scale {
+	transition: transform var(--transition-base);
+}
+
+.hover-scale:hover {
+	transform: scale(1.05);
+}
+
+.hover-brightness {
+	transition: filter var(--transition-base);
+}
+
+.hover-brightness:hover {
+	filter: brightness(1.1);
+}
+
+/* Image zoom effect */
+.img-zoom {
+	overflow: hidden;
+}
+
+.img-zoom img {
+	transition: transform var(--transition-slow);
+}
+
+.img-zoom:hover img {
+	transform: scale(1.1);
+}
+
+/* ========================================
+   TEXT ANIMATIONS
+   ======================================== */
+
+.text-gradient {
+	background: linear-gradient(
+		135deg,
+		var(--text-primary) 0%,
+		var(--color-accent-500) 100%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.text-gradient--animated {
+	background-size: 200% auto;
+	animation: gradientMove 3s ease infinite;
+}
+
+@keyframes gradientMove {
+	0%,
+	100% {
+		background-position: 0% center;
+	}
+	50% {
+		background-position: 100% center;
+	}
+}
+
+/* Typewriter effect (requires JS) */
+.typewriter {
+	overflow: hidden;
+	border-right: 2px solid var(--color-accent-500);
+	white-space: nowrap;
+	animation:
+		typing 3.5s steps(40, end),
+		blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes blink-caret {
+	from,
+	to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: var(--color-accent-500);
+	}
+}
+
+/* ========================================
+   LOADING STATES
+   ======================================== */
+
+.skeleton {
+	background: linear-gradient(
+		90deg,
+		var(--bg-tertiary) 25%,
+		var(--bg-card) 50%,
+		var(--bg-tertiary) 75%
+	);
+	background-size: 200% 100%;
+	animation: shimmer 1.5s infinite;
+	border-radius: var(--radius-md);
+}
+
+.spinner {
+	width: 40px;
+	height: 40px;
+	border: 3px solid var(--border-color);
+	border-top-color: var(--color-accent-500);
+	border-radius: var(--radius-full);
+	animation: rotate 1s linear infinite;
+}
+
+/* ========================================
+   PAGE TRANSITIONS
+   ======================================== */
+
+.page-transition {
+	animation: fadeIn 0.3s ease;
+}
+
+.page-enter {
+	animation: fadeInUp 0.4s ease;
+}
+
+/* ========================================
+   DECORATIVE ANIMATIONS
+   ======================================== */
+
+.float {
+	animation: float 3s ease-in-out infinite;
+}
+
+.pulse {
+	animation: pulse 2s ease-in-out infinite;
+}
+
+.glow {
+	animation: glow 2s ease-in-out infinite;
+}
+
+/* ========================================
+   PARALLAX HELPERS
+   ======================================== */
+
+.parallax {
+	will-change: transform;
+}
+
+.parallax--slow {
+	--parallax-speed: 0.3;
+}
+
+.parallax--medium {
+	--parallax-speed: 0.5;
+}
+
+.parallax--fast {
+	--parallax-speed: 0.8;
+}
+
+/* ========================================
+   CURSOR EFFECTS
+   ======================================== */
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.cursor-none {
+	cursor: none;
+}
+
+/* ========================================
+   FOCUS ANIMATIONS
+   ======================================== */
+
+.focus-ring:focus-visible {
+	outline: 2px solid var(--color-accent-500);
+	outline-offset: 2px;
+	animation: pulse 1s ease-in-out;
+}
+
+/* ========================================
+   COUNTER ANIMATION (for stats)
+   ======================================== */
+
+.counter {
+	font-variant-numeric: tabular-nums;
+}
+
+/* ========================================
+   MARQUEE
+   ======================================== */
+
+.marquee {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.marquee__content {
+	display: inline-flex;
+	animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+/* ========================================
+   LINE DRAWING (for decorative elements)
+   ======================================== */
+
+.line-draw {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	animation: lineReveal 2s ease forwards;
+}
+
+@keyframes lineReveal {
+	to {
+		stroke-dashoffset: 0;
+	}
+}

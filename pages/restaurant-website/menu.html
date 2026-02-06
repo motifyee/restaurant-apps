@@ -1,0 +1,813 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- SEO Meta Tags -->
+		<title>Our Menu | Bella Vista Fine Dining</title>
+		<meta
+			name="description"
+			content="Explore our exquisite menu featuring appetizers, main courses, seafood, and desserts. Fresh ingredients, artfully prepared by our award-winning chefs."
+		/>
+		<meta
+			name="keywords"
+			content="restaurant menu, fine dining menu, gourmet food, appetizers, main courses, desserts"
+		/>
+
+		<!-- Open Graph -->
+		<meta property="og:title" content="Our Menu | Bella Vista Fine Dining" />
+		<meta
+			property="og:description"
+			content="Explore our exquisite menu featuring appetizers, main courses, seafood, and desserts."
+		/>
+		<meta property="og:type" content="website" />
+
+		<!-- Favicon -->
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>"
+		/>
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="styles/main.css" />
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="navbar scrolled" id="navbar">
+			<div class="container navbar__inner">
+				<a href="index.html" class="navbar__logo">
+					<span class="navbar__logo-icon">🍽️</span>
+					Bella Vista
+				</a>
+
+				<div class="navbar__menu">
+					<a href="index.html" class="navbar__link">Home</a>
+					<a href="menu.html" class="navbar__link active">Menu</a>
+					<a href="about.html" class="navbar__link">About</a>
+					<a href="contact.html" class="navbar__link">Contact</a>
+					<a href="reservations.html" class="navbar__link">Reservations</a>
+				</div>
+
+				<div style="display: flex; align-items: center; gap: var(--space-4)">
+					<button
+						class="theme-toggle navbar__theme-toggle"
+						id="theme-toggle"
+						aria-label="Toggle theme"
+						title="Switch between light and dark mode"
+					>
+						<svg
+							class="theme-toggle__icon icon-sun"
+							width="22"
+							height="22"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<circle cx="12" cy="12" r="5" />
+							<line x1="12" y1="1" x2="12" y2="3" />
+							<line x1="12" y1="21" x2="12" y2="23" />
+							<line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+							<line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+							<line x1="1" y1="12" x2="3" y2="12" />
+							<line x1="21" y1="12" x2="23" y2="12" />
+							<line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+							<line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+						</svg>
+						<svg
+							class="theme-toggle__icon icon-moon"
+							width="22"
+							height="22"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+						</svg>
+					</button>
+
+					<a href="reservations.html" class="btn btn--primary navbar__cta"
+						>Book a Table</a
+					>
+				</div>
+
+				<button
+					class="navbar__toggle"
+					id="menu-toggle"
+					aria-label="Toggle menu"
+				>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</nav>
+
+		<!-- Mobile Navigation -->
+		<div class="mobile-nav" id="mobile-nav">
+			<a href="index.html" class="mobile-nav__link">Home</a>
+			<a href="menu.html" class="mobile-nav__link">Menu</a>
+			<a href="about.html" class="mobile-nav__link">About</a>
+			<a href="contact.html" class="mobile-nav__link">Contact</a>
+			<a href="reservations.html" class="mobile-nav__link">Reservations</a>
+		</div>
+
+		<!-- Menu Hero -->
+		<section class="menu-hero">
+			<div class="container">
+				<div class="reveal">
+					<span class="section-header__badge">Culinary Excellence</span>
+					<h1>Our Menu</h1>
+					<p
+						style="
+							max-width: 600px;
+							margin-inline: auto;
+							margin-top: var(--space-4);
+						"
+					>
+						Each dish is crafted with passion using the finest seasonal
+						ingredients. Our menu changes with the seasons to bring you the
+						freshest flavors.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Menu Categories (Sticky Tabs) -->
+		<div class="menu-categories">
+			<div class="container">
+				<div class="tabs" id="menu-tabs">
+					<button class="tab active" data-category="appetizers">
+						Appetizers
+					</button>
+					<button class="tab" data-category="mains">Main Courses</button>
+					<button class="tab" data-category="seafood">Seafood</button>
+					<button class="tab" data-category="desserts">Desserts</button>
+					<button class="tab" data-category="drinks">Drinks</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Menu Items -->
+		<section class="section">
+			<div class="container">
+				<!-- Appetizers -->
+				<div class="menu-section" id="appetizers">
+					<h2 style="margin-bottom: var(--space-8)">Appetizers</h2>
+					<div class="menu-items reveal">
+						<article class="menu-card">
+							<div class="menu-card__image">
+								<img
+									src="https://images.unsplash.com/photo-1541014741259-de529411b96a?w=200&q=80"
+									alt="Burrata Caprese"
+									loading="lazy"
+								/>
+							</div>
+							<div class="menu-card__content">
+								<div class="menu-card__header">
+									<h3 class="menu-card__title">Burrata Caprese</h3>
+									<span class="menu-card__price">$18</span>
+								</div>
+								<p class="menu-card__description">
+									Creamy burrata, heirloom tomatoes, fresh basil, aged balsamic
+									reduction, extra virgin olive oil.
+								</p>
+								<div class="menu-card__tags">
+									<span class="menu-card__tag menu-card__tag--veg"
+										>Vegetarian</span
+									>
+									<span class="menu-card__tag">Gluten-Free</span>
+								</div>
+							</div>
+						</article>
+
+						<article class="menu-card">
+							<div class="menu-card__image">
+								<img
+									src="images/appetizer.png"
+									alt="Bruschetta Trio"
+									loading="lazy"
+									onerror="
+										this.src =
+											'https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=200&q=80'
+									"
+								/>
+							</div>
+							<div class="menu-card__content">
+								<div class="menu-card__header">
+									<h3 class="menu-card__title">Bruschetta Trio</h3>
+									<span class="menu-card__price">$16</span>
+								</div>
+								<p class="menu-card__description">
+									Three artisan toasts: tomato basil, wild mushroom truffle, and
+									smoked salmon with crème fraîche.
+								</p>
+								<div class="menu-card__tags">
+									<span class="menu-card__tag">Chef's Choice</span>
+								</div>
+							</div>
+						</article>
+
+						<article class="menu-card">
+							<div class="menu-card__image">
+								<img
+									src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=200&q=80"
+									alt="Tuna Tartare"
+									loading="lazy"
+								/>
+							</div>
+							<div class="menu-card__content">
+								<div class="menu-card__header">
+									<h3 class="menu-card__title">Tuna Tartare</h3>
+									<span class="menu-card__price">$24</span>
+								</div>
+								<p class="menu-card__description">
+									Sushi-grade ahi tuna, avocado mousse, sesame-soy dressing,
+									wonton crisps, micro greens.
+								</p>
+								<div class="menu-card__tags">
+									<span class="menu-card__tag">Gluten-Free Option</span>
+								</div>
+							</div>
+						</article>
+
+						<article class="menu-card">
+							<div class="menu-card__image">
+								<img
+									src="https://images.unsplash.com/photo-1547496502-affa22d38842?w=200&q=80"
+									alt="French Onion Soup"
+									loading="lazy"
+								/>
+							</div>
+							<div class="menu-card__content">
+								<div class="menu-card__header">
+									<h3 class="menu-card__title">French Onion Soup</h3>
+									<span class="menu-card__price">$14</span>
+								</div>
+								<p class="menu-card__description">
+									Caramelized onions in rich beef broth, topped with crusty
+									bread and melted gruyère cheese.
+								</p>
+								<div class="menu-card__tags">
+									<span class="menu-card__tag">Classic</span>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+
+				<!-- Divider -->
+				<div class="divider">
+					<span class="divider__icon">✦</span>
+				</div>
+
+				<!-- Main Courses -->
+				<div class="menu-section" id="mains">
+					<h2 style="margin-bottom: var(--space-8)">Main Courses</h2>
+					<div class="menu-items reveal">
+						<article class="menu-card">
+							<div class="menu-card__image">
+								<img
+									src="https://images.unsplash.com/photo-1546833998-877b37c2e5c6?w=200&q=80"
+									alt="Wagyu Beef Tenderloin"
+									loading="lazy"
+								/>
+							</div>
+							<div class="menu-card__content">
+								<div class="menu-card__header">
+									<h3 class="menu-card__title">Wagyu Beef Tenderloin</h3>
+									<span class="menu-card__price">$85</span>
+								</div>
+								<p class="menu-card__description">
+									A5 Japanese Wagyu, black truffle jus, roasted seasonal
+									vegetables, silky potato mousseline.
+								</p>
+								<div class="menu-card__tags">
+									<span class="menu-card__tag">Chef's Special</span>
+									<span class="menu-card__tag">Gluten-Free</span>
+								</div>
+							</div>
+						</article>
+
+						<article class="menu-card">
+							<div class="menu-card__image">
+								<img
+									src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=200&q=80"
+									alt="Rack of Lamb"
+									loading="lazy"
+								/>
+							</div>
+							<div class="menu-card__content">
+								<div class="menu-card__header">
+									<h3 class="menu-card__title">Herb-Crusted Rack of Lamb</h3>
+									<span class="menu-card__price">$58</span>
+								</div>
+								<p class="menu-card__description">
+									New Zealand lamb, rosemary-dijon crust, minted pea purée,
+									roasted fingerling potatoes, red wine reduction.
+								</p>
+								<div class="menu-card__tags">
+									<span class="menu-card__tag">Popular</span>
+								</div>
+							</div>
+						</article>
+
+						<article class="menu-card">
+							<div class="menu-card__image">
+								<img
+									src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=200&q=80"
+									alt="Duck Breast"
+									loading="lazy"
+								/>
+							</div>
+							<div class="menu-card__content">
+								<div class="menu-card__header">
+									<h3 class="menu-card__title">Pan-Seared Duck Breast</h3>
+									<span class="menu-card__price">$48</span>
+								</div>
+								<p class="menu-card__description">
+									Crispy-skinned Muscovy duck, cherry gastrique, parsnip purée,
+									sautéed Swiss chard.
+								</p>
+								<div class="menu-card__tags">
+									<span class="menu-card__tag">Gluten-Free</span>
+								</div>
+							</div>
+						</article>
+
+						<article class="menu-card">
+							<div class="menu-card__image">
+								<img
+									src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=200&q=80"
+									alt="Truffle Risotto"
+									loading="lazy"
+								/>
+							</div>
+							<div class="menu-card__content">
+								<div class="menu-card__header">
+									<h3 class="menu-card__title">Black Truffle Risotto</h3>
+									<span class="menu-card__price">$42</span>
+								</div>
+								<p class="menu-card__description">
+									Carnaroli rice, wild mushroom medley, shaved black truffle,
+									aged Parmigiano-Reggiano, truffle oil.
+								</p>
+								<div class="menu-card__tags">
+									<span class="menu-card__tag menu-card__tag--veg"
+										>Vegetarian</span
+									>
+									<span class="menu-card__tag">Gluten-Free</span>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+
+				<!-- Divider -->
+				<div class="divider">
+					<span class="divider__icon">✦</span>
+				</div>
+
+				<!-- Seafood -->
+				<div class="menu-section" id="seafood">
+					<h2 style="margin-bottom: var(--space-8)">Seafood</h2>
+					<div class="menu-items reveal">
+						<article class="menu-card">
+							<div class="menu-card__image">
+								<img
+									src="https://images.unsplash.com/photo-1580959375944-abd7e991f971?w=200&q=80"
+									alt="Lobster Thermidor"
+									loading="lazy"
+								/>
+							</div>
+							<div class="menu-card__content">
+								<div class="menu-card__header">
+									<h3 class="menu-card__title">Lobster Thermidor</h3>
+									<span class="menu-card__price">$72</span>
+								</div>
+								<p class="menu-card__description">
+									Whole Maine lobster, cognac cream sauce, gruyère gratin, herb
+									butter, seasonal accompaniments.
+								</p>
+								<div class="menu-card__tags">
+									<span class="menu-card__tag">Signature</span>
+								</div>
+							</div>
+						</article>
+
+						<article class="menu-card">
+							<div class="menu-card__image">
+								<img
+									src="https://images.unsplash.com/photo-1485704686097-ed47f7263ca4?w=200&q=80"
+									alt="Chilean Sea Bass"
+									loading="lazy"
+								/>
+							</div>
+							<div class="menu-card__content">
+								<div class="menu-card__header">
+									<h3 class="menu-card__title">Chilean Sea Bass</h3>
+									<span class="menu-card__price">$54</span>
+								</div>
+								<p class="menu-card__description">
+									Miso-glazed sea bass, bok choy, shiitake mushrooms,
+									ginger-scallion sauce, jasmine rice.
+								</p>
+								<div class="menu-card__tags">
+									<span class="menu-card__tag">Popular</span>
+								</div>
+							</div>
+						</article>
+
+						<article class="menu-card">
+							<div class="menu-card__image">
+								<img
+									src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=200&q=80"
+									alt="Grilled Octopus"
+									loading="lazy"
+								/>
+							</div>
+							<div class="menu-card__content">
+								<div class="menu-card__header">
+									<h3 class="menu-card__title">Grilled Spanish Octopus</h3>
+									<span class="menu-card__price">$38</span>
+								</div>
+								<p class="menu-card__description">
+									Tender charred octopus, chorizo, crispy potatoes, smoked
+									paprika aioli, micro herbs.
+								</p>
+								<div class="menu-card__tags">
+									<span class="menu-card__tag">Gluten-Free</span>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+
+				<!-- Divider -->
+				<div class="divider">
+					<span class="divider__icon">✦</span>
+				</div>
+
+				<!-- Desserts -->
+				<div class="menu-section" id="desserts">
+					<h2 style="margin-bottom: var(--space-8)">Desserts</h2>
+					<div class="menu-items reveal">
+						<article class="menu-card">
+							<div class="menu-card__image">
+								<img
+									src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=200&q=80"
+									alt="Chocolate Fondant"
+									loading="lazy"
+								/>
+							</div>
+							<div class="menu-card__content">
+								<div class="menu-card__header">
+									<h3 class="menu-card__title">Valrhona Chocolate Fondant</h3>
+									<span class="menu-card__price">$18</span>
+								</div>
+								<p class="menu-card__description">
+									Warm chocolate cake with molten center, salted caramel sauce,
+									Madagascar vanilla ice cream.
+								</p>
+								<div class="menu-card__tags">
+									<span class="menu-card__tag menu-card__tag--veg"
+										>Vegetarian</span
+									>
+								</div>
+							</div>
+						</article>
+
+						<article class="menu-card">
+							<div class="menu-card__image">
+								<img
+									src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=200&q=80"
+									alt="Crème Brûlée"
+									loading="lazy"
+								/>
+							</div>
+							<div class="menu-card__content">
+								<div class="menu-card__header">
+									<h3 class="menu-card__title">Classic Crème Brûlée</h3>
+									<span class="menu-card__price">$14</span>
+								</div>
+								<p class="menu-card__description">
+									Tahitian vanilla custard, caramelized sugar crust, fresh
+									seasonal berries.
+								</p>
+								<div class="menu-card__tags">
+									<span class="menu-card__tag menu-card__tag--veg"
+										>Vegetarian</span
+									>
+									<span class="menu-card__tag">Gluten-Free</span>
+								</div>
+							</div>
+						</article>
+
+						<article class="menu-card">
+							<div class="menu-card__image">
+								<img
+									src="https://images.unsplash.com/photo-1560180474-e8563fd75bab?w=200&q=80"
+									alt="Tiramisu"
+									loading="lazy"
+								/>
+							</div>
+							<div class="menu-card__content">
+								<div class="menu-card__header">
+									<h3 class="menu-card__title">Classic Tiramisu</h3>
+									<span class="menu-card__price">$16</span>
+								</div>
+								<p class="menu-card__description">
+									Espresso-soaked ladyfingers, mascarpone cream, dark cocoa
+									powder, amaretto drizzle.
+								</p>
+								<div class="menu-card__tags">
+									<span class="menu-card__tag">Italian Classic</span>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+
+				<!-- Divider -->
+				<div class="divider">
+					<span class="divider__icon">✦</span>
+				</div>
+
+				<!-- Drinks -->
+				<div class="menu-section" id="drinks">
+					<h2 style="margin-bottom: var(--space-8)">Drinks & Cocktails</h2>
+					<div class="menu-items reveal">
+						<article class="menu-card">
+							<div class="menu-card__image">
+								<img
+									src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=200&q=80"
+									alt="Signature Martini"
+									loading="lazy"
+								/>
+							</div>
+							<div class="menu-card__content">
+								<div class="menu-card__header">
+									<h3 class="menu-card__title">Bella Vista Martini</h3>
+									<span class="menu-card__price">$18</span>
+								</div>
+								<p class="menu-card__description">
+									House-infused lavender gin, elderflower liqueur, fresh lemon,
+									edible gold leaf.
+								</p>
+								<div class="menu-card__tags">
+									<span class="menu-card__tag">Signature</span>
+								</div>
+							</div>
+						</article>
+
+						<article class="menu-card">
+							<div class="menu-card__image">
+								<img
+									src="https://images.unsplash.com/photo-1470338745628-171cf53de3a8?w=200&q=80"
+									alt="Wine Selection"
+									loading="lazy"
+								/>
+							</div>
+							<div class="menu-card__content">
+								<div class="menu-card__header">
+									<h3 class="menu-card__title">Sommelier's Selection</h3>
+									<span class="menu-card__price">From $15</span>
+								</div>
+								<p class="menu-card__description">
+									Curated wines by the glass from our extensive cellar. Ask your
+									server for tonight's featured selections.
+								</p>
+								<div class="menu-card__tags">
+									<span class="menu-card__tag">Wine Pairing Available</span>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="section">
+			<div class="container">
+				<div class="cta-section reveal">
+					<h2 class="cta-section__title">Ready to Taste Excellence?</h2>
+					<p class="cta-section__description">
+						Book your table now and experience why guests return time and time
+						again.
+					</p>
+					<a href="reservations.html" class="btn btn--primary btn--large"
+						>Make a Reservation</a
+					>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__grid">
+					<div class="footer__brand">
+						<div class="footer__logo">
+							<span>🍽️</span>
+							Bella Vista
+						</div>
+						<p class="footer__description">
+							Experience the art of fine dining in an atmosphere of elegance and
+							warmth. Every visit is a celebration.
+						</p>
+						<div class="footer__social">
+							<a href="#" class="footer__social-link" aria-label="Facebook">
+								<svg
+									width="20"
+									height="20"
+									fill="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+									/>
+								</svg>
+							</a>
+							<a href="#" class="footer__social-link" aria-label="Instagram">
+								<svg
+									width="20"
+									height="20"
+									fill="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+									/>
+								</svg>
+							</a>
+							<a href="#" class="footer__social-link" aria-label="Twitter">
+								<svg
+									width="20"
+									height="20"
+									fill="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+
+					<div>
+						<h4 class="footer__heading">Quick Links</h4>
+						<nav class="footer__links">
+							<a href="index.html" class="footer__link">Home</a>
+							<a href="menu.html" class="footer__link">Our Menu</a>
+							<a href="about.html" class="footer__link">About Us</a>
+							<a href="reservations.html" class="footer__link">Reservations</a>
+							<a href="contact.html" class="footer__link">Contact</a>
+						</nav>
+					</div>
+
+					<div>
+						<h4 class="footer__heading">Opening Hours</h4>
+						<div class="hours-list">
+							<div class="hours-item">
+								<span class="hours-item__day">Mon - Thu</span>
+								<span class="hours-item__time">5:00 PM - 10:00 PM</span>
+							</div>
+							<div class="hours-item">
+								<span class="hours-item__day">Fri - Sat</span>
+								<span class="hours-item__time">5:00 PM - 11:00 PM</span>
+							</div>
+							<div class="hours-item">
+								<span class="hours-item__day">Sunday</span>
+								<span class="hours-item__time">4:00 PM - 9:00 PM</span>
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<h4 class="footer__heading">Contact Us</h4>
+						<div class="footer__contact-item">
+							<svg
+								width="18"
+								height="18"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+							>
+								<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+								<circle cx="12" cy="10" r="3" />
+							</svg>
+							<span>123 Gourmet Street<br />Downtown, NY 10001</span>
+						</div>
+						<div class="footer__contact-item">
+							<svg
+								width="18"
+								height="18"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+							>
+								<path
+									d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
+								/>
+							</svg>
+							<span>+1 (555) 123-4567</span>
+						</div>
+						<div class="footer__contact-item">
+							<svg
+								width="18"
+								height="18"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								viewBox="0 0 24 24"
+							>
+								<path
+									d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+								/>
+								<polyline points="22,6 12,13 2,6" />
+							</svg>
+							<span>hello@bellavista.com</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer__bottom">
+					<p class="footer__copyright">
+						© 2026 Bella Vista. All rights reserved.
+					</p>
+					<div class="footer__legal">
+						<a href="#" class="footer__legal-link">Privacy Policy</a>
+						<a href="#" class="footer__legal-link">Terms of Service</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="js/main.js"></script>
+		<script src="js/animations.js"></script>
+		<script>
+			// Menu category tab switching with smooth scroll
+			document.addEventListener('DOMContentLoaded', () => {
+				const tabs = document.querySelectorAll('.tab');
+				const navbarHeight = 140; // navbar + tabs height
+
+				tabs.forEach(tab => {
+					tab.addEventListener('click', () => {
+						// Update active tab
+						tabs.forEach(t => t.classList.remove('active'));
+						tab.classList.add('active');
+
+						// Scroll to category section
+						const category = tab.dataset.category;
+						const section = document.getElementById(category);
+
+						if (section) {
+							const targetPosition =
+								section.getBoundingClientRect().top +
+								window.scrollY -
+								navbarHeight;
+							window.scrollTo({
+								top: targetPosition,
+								behavior: 'smooth',
+							});
+						}
+					});
+				});
+
+				// Update active tab on scroll (Intersection Observer)
+				const sections = document.querySelectorAll('.menu-section');
+
+				const observer = new IntersectionObserver(
+					entries => {
+						entries.forEach(entry => {
+							if (entry.isIntersecting) {
+								const id = entry.target.id;
+								tabs.forEach(tab => {
+									tab.classList.toggle('active', tab.dataset.category === id);
+								});
+							}
+						});
+					},
+					{
+						rootMargin: '-150px 0px -50% 0px',
+						threshold: 0,
+					},
+				);
+
+				sections.forEach(section => observer.observe(section));
+			});
+		</script>
+	</body>
+</html>

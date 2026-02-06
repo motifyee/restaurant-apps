@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Survey Navigator - Restaurant Platform</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="navigator.css" />
+	</head>
+	<body>
+		<div class="hero">
+			<div class="hero-content">
+				<h1>📋 Survey Navigator</h1>
+				<p class="subtitle">
+					View and manage submitted restaurant platform surveys
+				</p>
+				<div class="hero-actions">
+					<a href="index.html" class="back-link">← Back to Survey</a>
+					<button id="refreshBtn" class="refresh-btn">
+						<span class="btn-icon">🔄</span> Refresh
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Filters & Search Bar -->
+		<nav class="filter-nav">
+			<div class="filter-container">
+				<div class="search-box">
+					<input
+						type="search"
+						id="searchInput"
+						placeholder="Search by restaurant name, email..."
+						aria-label="Search surveys"
+					/>
+					<span class="search-icon">🔍</span>
+				</div>
+				<div class="filter-group">
+					<select id="roleFilter" aria-label="Filter by role">
+						<option value="">All Roles</option>
+						<option value="owner">Owner</option>
+						<option value="manager">Manager</option>
+						<option value="waiter">Waiter/Server</option>
+						<option value="customer">Customer</option>
+						<option value="other">Other</option>
+					</select>
+					<select id="typeFilter" aria-label="Filter by restaurant type">
+						<option value="">All Types</option>
+						<option value="cafe">Café</option>
+						<option value="fastfood">Fast food / QSR</option>
+						<option value="casual">Casual dining</option>
+						<option value="finedining">Fine dining</option>
+						<option value="cloudkitchen">Cloud kitchen</option>
+						<option value="bakery">Bakery / Dessert</option>
+					</select>
+					<select id="sortBy" aria-label="Sort by">
+						<option value="newest">Newest First</option>
+						<option value="oldest">Oldest First</option>
+						<option value="name">Name (A-Z)</option>
+					</select>
+				</div>
+			</div>
+			<div class="stats-bar">
+				<span id="totalCount" class="stat-item">Loading...</span>
+				<span id="filterCount" class="stat-item"></span>
+			</div>
+		</nav>
+
+		<!-- Surveys Container -->
+		<div class="container" id="surveys-container">
+			<!-- Loading State -->
+			<div id="loadingState" class="loading-state">
+				<div class="spinner"></div>
+				<p>Loading surveys...</p>
+			</div>
+
+			<!-- Error State -->
+			<div id="errorState" class="error-state" style="display: none;">
+				<div class="error-icon">⚠️</div>
+				<h3>Failed to Load Surveys</h3>
+				<p id="errorMessage">Unable to fetch surveys from the server.</p>
+				<button id="retryBtn" class="retry-btn">Try Again</button>
+			</div>
+
+			<!-- Empty State -->
+			<div id="emptyState" class="empty-state" style="display: none;">
+				<div class="empty-icon">📭</div>
+				<h3>No Surveys Found</h3>
+				p id="emptyMessage">No surveys have been submitted yet.</p>
+				<a href="index.html" class="cta-link">Submit a Survey →</a>
+			</div>
+
+			<!-- Surveys List -->
+			<div id="surveysList" class="surveys-list"></div>
+		</div>
+
+		<!-- Survey Detail Modal -->
+		<div id="surveyModal" class="modal" aria-hidden="true">
+			<div class="modal-overlay" id="modalOverlay"></div>
+			<div class="modal-content" role="dialog" aria-modal="true">
+				<div class="modal-header">
+					<h2 id="modalTitle">Survey Details</h2>
+					<button
+						id="modalClose"
+						class="modal-close"
+						aria-label="Close modal"
+					>
+						×
+					</button>
+				</div>
+				<div id="modalBody" class="modal-body"></div>
+				<div class="modal-footer">
+					<button id="exportBtn" class="export-btn">📥 Export JSON</button>
+					<button id="modalCloseFooter" class="close-btn">Close</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Toast Notification -->
+		<div id="toast" class="toast"></div>
+
+		<script type="module">
+			import { SurveyNavigator } from './navigator.js';
+			document.addEventListener('DOMContentLoaded', () => {
+				new SurveyNavigator();
+			});
+		</script>
+	</body>
+</html>

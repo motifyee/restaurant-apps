@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Restaurant Platform Survey</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="hero">
+			<div class="hero-content">
+				<h1>🍽️ Restaurant Platform Survey</h1>
+				<p class="subtitle">
+					Help us build the perfect all-in-one solution for modern restaurants
+				</p>
+
+				<div class="value-props">
+					<div class="value-prop">
+						<h3>✨ Your Brand, Your Data</h3>
+						<p>No marketplaces. No hidden commissions.</p>
+					</div>
+					<div class="value-prop">
+						<h3>🚀 Unified Operations</h3>
+						<p>Orders, payments, CRM in one dashboard</p>
+					</div>
+					<div class="value-prop">
+						<h3>💰 Lower Costs</h3>
+						<p>Reduce dependency on high-fee platforms</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<nav id="survey-nav" class="sticky-nav">
+			<!-- Navigation will be rendered here -->
+		</nav>
+
+		<div class="container" id="survey-container">
+			<!-- Survey Form will be rendered here -->
+		</div>
+
+		<div id="toast" class="toast"></div>
+
+		<script type="module">
+			import { initSurvey } from './survey.js';
+			document.addEventListener('DOMContentLoaded', initSurvey);
+		</script>
+	</body>
+</html>

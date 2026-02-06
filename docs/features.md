@@ -2,6 +2,8 @@
 
 ## Features
 
+- Time to available table
+
 - Admin Dashboard
   - Total Orders (Today, This Monath)
   - Total Customers (New Today, Total)

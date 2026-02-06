@@ -749,15 +749,6 @@ textarea {
 	margin-left: 0.75rem;
 }
 
-[dir='rtl'] .checkbox-item,
-[dir='rtl'] .radio-item {
-	flex-direction: row-reverse;
-}
-
-[dir='rtl'] .recording-chip {
-	flex-direction: row-reverse;
-}
-
 [dir='rtl'] .language-switcher {
 	right: auto;
 	left: 2rem;

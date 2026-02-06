@@ -37,6 +37,7 @@ export const en = {
 		pleaseSpecify: 'Please specify...',
 		toggleNav: 'Toggle navigation',
 		feature: 'Feature',
+		addNote: 'Add a note...',
 	},
 
 	// Toast messages

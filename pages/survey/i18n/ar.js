@@ -36,6 +36,7 @@ export const ar = {
 		pleaseSpecify: 'يرجى التحديد...',
 		toggleNav: 'تبديل القائمة',
 		feature: 'الميزة',
+		addNote: 'أضف ملاحظة...',
 	},
 
 	// Toast messages

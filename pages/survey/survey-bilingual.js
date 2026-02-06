@@ -420,6 +420,17 @@ function createQuestion(q) {
 				groupDiv.appendChild(otherInput);
 			}
 
+			// Add generic note input for all selection questions
+			const noteInput = document.createElement('input');
+			noteInput.type = 'text';
+			noteInput.name = `${q.name}_note`;
+			noteInput.placeholder = i18n.t('ui.addNote');
+			noteInput.className = 'question-note';
+			noteInput.style.marginTop = '0.5rem';
+			noteInput.style.borderColor = '#eee';
+			noteInput.style.fontSize = '0.9em';
+			groupDiv.appendChild(noteInput);
+
 			qDiv.appendChild(groupDiv);
 			break;
 
@@ -467,6 +478,17 @@ function createQuestion(q) {
 			tableHtml += `</tbody></table>`;
 			grid.innerHTML = tableHtml;
 			qDiv.appendChild(grid);
+
+			// Add generic note input for rating table
+			const rateNoteInput = document.createElement('input');
+			rateNoteInput.type = 'text';
+			rateNoteInput.name = `${q.name}_note`;
+			rateNoteInput.placeholder = i18n.t('ui.addNote');
+			rateNoteInput.className = 'question-note';
+			rateNoteInput.style.marginTop = '0.5rem';
+			rateNoteInput.style.borderColor = '#eee';
+			rateNoteInput.style.fontSize = '0.9em';
+			qDiv.appendChild(rateNoteInput);
 			break;
 	}
 
@@ -704,7 +726,15 @@ async function handleFormSubmit(e) {
 			interviewWillingness: formData.get('interviewWillingness'),
 		},
 		voiceRecordings: voiceRecordings,
+		notes: {},
 	};
+
+	// Collect notes dynamically
+	for (const [key, value] of formData.entries()) {
+		if (key.endsWith('_note') && value && value.trim() !== '') {
+			data.notes[key.replace('_note', '')] = value;
+		}
+	}
 
 	// Role Specific Data Extraction
 	const role = data.basicInfo.surveyedRole;

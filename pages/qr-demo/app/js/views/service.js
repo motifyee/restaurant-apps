@@ -42,20 +42,6 @@ export function renderService(container) {
                             </button>
                         `).join('')}
                     </div>
-
-                    <!-- Active Requests -->
-                    ${serviceRequests.length > 0 ? `
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>طلبات الخدمة</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="service-requests-list">
-                                    ${serviceRequests.map(request => renderServiceRequest(request)).join('')}
-                                </div>
-                            </div>
-                        </div>
-                    ` : ''}
                 </div>
             </div>
 

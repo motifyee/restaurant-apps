@@ -99,12 +99,12 @@
 	width: 100%;
 }
 
-.navbar__cta {
+.navbar .navbar__cta {
 	display: none;
 }
 
 @media (min-width: 768px) {
-	.navbar__cta {
+	.navbar .navbar__cta {
 		display: inline-flex;
 	}
 }
@@ -118,6 +118,9 @@
 	background: none;
 	border: none;
 	cursor: pointer;
+	color: var(--text-primary);
+	flex-shrink: 0;
+	z-index: 20;
 }
 
 @media (min-width: 768px) {
@@ -130,7 +133,7 @@
 	display: block;
 	width: 24px;
 	height: 2px;
-	background: var(--text-primary);
+	background-color: currentColor;
 	transition: all var(--transition-fast);
 }
 

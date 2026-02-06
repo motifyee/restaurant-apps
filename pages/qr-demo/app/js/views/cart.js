@@ -150,8 +150,9 @@ function renderCartItem(item, index) {
         <div class="cart-item" data-item-index="${index}">
             <div class="cart-item-img">
                 ${item.image
-                    ? `<img src="${item.image}" alt="${item.name}">`
-                    : `<div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 24px;">🍽️</div>`
+                    ? `<img src="${item.image}" alt="${item.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                       <div style="display:none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 32px; background: var(--bg-tertiary);">${item.emoji || '🍽️'}</div>`
+                    : `<div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 32px; background: var(--bg-tertiary);">${item.emoji || '🍽️'}</div>`
                 }
             </div>
             <div class="cart-item-content">

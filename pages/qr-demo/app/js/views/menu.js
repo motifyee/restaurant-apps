@@ -204,8 +204,9 @@ function renderItemCard(item) {
         <div class="menu-item ${!item.available ? 'menu-item-unavailable' : ''}" data-item-id="${item.id}">
             <div class="menu-item-img">
                 ${item.image
-                    ? `<img src="${item.image}" alt="${item.name}" loading="lazy">`
-                    : `<div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 32px;">🍽️</div>`
+                    ? `<img src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                       <div style="display:none; width: 100%; height: 100%; align-items: center; justify-content: center; font-size: 40px; background: var(--bg-tertiary);">${item.emoji || '🍽️'}</div>`
+                    : `<div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 40px; background: var(--bg-tertiary);">${item.emoji || '🍽️'}</div>`
                 }
             </div>
             <div class="menu-item-content">
@@ -271,8 +272,11 @@ function showItemDetail(item) {
             </div>
             <div class="modal-body">
                 ${item.image
-                    ? `<img src="${item.image}" alt="${item.name}" class="item-detail-img">`
-                    : ''
+                    ? `<div style="position: relative; width: 100%; height: 200px; margin-bottom: 20px;">
+                        <img src="${item.image}" alt="${item.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-xl);" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div style="display:none; position: absolute; inset: 0; align-items: center; justify-content: center; font-size: 80px; background: var(--bg-tertiary); border-radius: var(--radius-xl);">${item.emoji || '🍽️'}</div>
+                       </div>`
+                    : `<div style="width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 80px; background: var(--bg-tertiary); border-radius: var(--radius-xl); margin-bottom: 20px;">${item.emoji || '🍽️'}</div>`
                 }
                 <p style="color: var(--text-secondary); margin-bottom: 20px;">${item.description}</p>
 

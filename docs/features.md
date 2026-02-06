@@ -53,12 +53,49 @@ _Shared customer intelligence and retention system._
 - **Feedback & Support**:
   - Ratings: Store/Meal ratings, Show/Hide ratings.
   - Support Channels: Phone, WhatsApp, Email, Centralized view.
-- **Notifications**: SMS, Email, WhatsApp, Telegram, Push.
+
+### Communication Infrastructure
+
+_Unified messaging engine for all stakeholders._
+
+- **Channels**:
+  - SMS & WhatsApp (Transactional & Marketing)
+  - Email (Newsletters, Receipts)
+  - Push Notifications (App/Web)
+  - Telegram (Staff/Admin Alerts)
+- **Use Cases**:
+  - Order Status Updates
+  - Loyalty Balance & Rewards
+  - Marketing Campaigns
+  - Staff Alerts (Waiter Summon, Kitchen)
+
+### Order Management Engine
+
+_Centralized order processing and workflow system._
+
+- **Unified Workflow**: New -> Confirmed -> Preparing -> Prepared -> Complete -> Cancelled.
+- **Order Types**: Takeaway, Delivery, Dine-In.
+- **Scheduling**:
+  - Pre-Orders (Time windows, delivery timing).
+  - Dine-in Pre-order modification windows.
+  - Reserve + Order ahead.
+- **Configuration**:
+  - Minimum Cart Value.
+  - Tax Number handling.
+  - **Identifiers**: Order ID (Prefix/Suffix), Token Numbers (Start/End, Daily Reset).
+- **History**: Full order archives.
 
 ### Hardware & Print Service
 
 - **POS Print Service**: Centralized printing for all channels.
 - **Receipts**: Custom layouts per branch/station.
+
+### Table & Floor Management
+
+_Shared module for mapping physical space._
+
+- **Layouts**: Graphical Table Layout, Naming, Capacity, Rooms.
+- **Status**: Real-time availability, Table Sub-Orders, Transfer Table.
 
 ---
 
@@ -66,35 +103,40 @@ _Shared customer intelligence and retention system._
 
 _The operational heart for staff._
 
-### Order Management
+### Order Operations
 
-_Unified view of Dine-in, Takeaway, Delivery._
+_Staff interface for the Order Engine._
 
-- **Status Workflow**: New -> Confirmed -> Preparing -> Prepared -> Complete -> Cancelled.
-- **Order Types**: Takeaway, Delivery, Dine-In.
-- **Modifications**: Pre-Orders (Time windows, delivery timing), Minimum Cart Value.
-- **Tax Number**
-- **Identifiers**: Order ID (Prefix/Suffix), Token Numbers (Start/End, Daily Reset).
-- **History**: Full order archives.
-
-### Table Management & Operations
-
-- **Layouts**: Graphical Table Layout, Naming, Capacity, Rooms.
-- **Status**: Table Sub-Orders (Multiple QR orders on same table), Transfer Table.
-- **Waiter Summon**: Requests for Bill, Water, Cutlery, SOS, Voice, Notes.
-- **Reservations**:
-  - Duration, Max Booking Times, Max Guests.
-  - Policies: Due time to cancel/confirm terms.
+- **Views**: Kanban/List view of unified orders.
+- **Actions**: Status updates, Assign driver, Refund/Cancel.
 
 ### Operations Features
 
 - **Checkout**: Address customization, Custom fields, Round-off, Tips (Suggested values, Leftover change).
 - **Lineup Management**: Call numbers, Status notifications.
 - **Staff Reports**: Performance tracking.
+- **Waiter Summon**: Requests for Bill, Water, Cutlery, SOS, Voice, Notes.
 
 ---
 
-## 3. Product: Smart QR Ordering
+## 3. Product: Smart Reservation System
+
+_Standalone booking engine for advanced table management._
+_Relies on: Table Management, Communication, Payments._
+
+### Booking Engine
+
+- **Rules**:
+  - Duration, Max Booking Times, Max Guests.
+  - Available Reservation Time Windows.
+- **Policies**:
+  - Due time to cancel (with penalty options).
+  - Due time to confirm.
+  - Terms & Conditions integration.
+
+---
+
+## 4. Product: Smart QR Ordering
 
 _Guest-facing in-restaurant application._
 _Detailed features in `qr-code-features.md`_
@@ -121,7 +163,7 @@ _Detailed features in `qr-code-features.md`_
 
 ---
 
-## 4. Product: Branded Website
+## 5. Product: Branded Website
 
 _Official digital home and remote sales channel._
 _Detailed features in `website-featues.md`_
@@ -143,7 +185,7 @@ _Detailed features in `website-featues.md`_
 
 ---
 
-## 5. Business Intelligence & Admin
+## 6. Business Intelligence & Admin
 
 _Control tower for the entire platform._
 

@@ -37,6 +37,18 @@ export const bilingualSurveyData = {
 			questions: [
 				{
 					label: {
+						en: 'GPS Location',
+						ar: 'موقع GPS',
+					},
+					name: 'gpsLocation',
+					type: 'location',
+					placeholder: {
+						en: 'Click button to get location',
+						ar: 'اضغط على الزر لتحديد الموقع',
+					},
+				},
+				{
+					label: {
 						en: 'Restaurant Name',
 						ar: 'اسم المطعم',
 					},

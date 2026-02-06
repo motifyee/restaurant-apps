@@ -493,6 +493,67 @@ function createQuestion(q) {
 			rateNoteInput.style.fontSize = '0.9em';
 			qDiv.appendChild(rateNoteInput);
 			break;
+
+		case 'location':
+			const locContainer = document.createElement('div');
+			locContainer.className = 'location-container';
+			locContainer.style.display = 'flex';
+			locContainer.style.gap = '10px';
+			locContainer.style.alignItems = 'center';
+
+			const locInput = document.createElement('input');
+			locInput.type = 'text';
+			locInput.name = q.name;
+			if (q.placeholder) locInput.placeholder = t(q.placeholder);
+			locInput.readOnly = true;
+			locInput.style.flex = '1';
+
+			const locBtn = document.createElement('button');
+			locBtn.type = 'button';
+			locBtn.className = 'location-btn';
+			locBtn.textContent = i18n.t('ui.getLocation');
+			locBtn.style.padding = '10px 15px';
+			locBtn.style.cursor = 'pointer';
+			locBtn.style.backgroundColor = 'var(--primary)';
+			locBtn.style.color = 'white';
+			locBtn.style.border = 'none';
+			locBtn.style.borderRadius = '8px';
+
+			locBtn.addEventListener('click', () => {
+				if (!navigator.geolocation) {
+					showToast(i18n.t('toast.gpsError'), 'error');
+					return;
+				}
+				locBtn.disabled = true;
+				const originalText = locBtn.textContent;
+				locBtn.textContent = '...';
+
+				navigator.geolocation.getCurrentPosition(
+					position => {
+						const { latitude, longitude } = position.coords;
+						locInput.value = `${latitude}, ${longitude}`;
+						showToast(i18n.t('ui.locationRetrieved'), 'success');
+						locBtn.disabled = false;
+						locBtn.textContent = originalText;
+					},
+					error => {
+						console.error('GPS Error', error);
+						if (error.code === 1) {
+							// PERMISSION_DENIED
+							showToast(i18n.t('toast.gpsPermission'), 'error');
+						} else {
+							showToast(i18n.t('toast.gpsError'), 'error');
+						}
+						locBtn.disabled = false;
+						locBtn.textContent = originalText;
+					},
+				);
+			});
+
+			locContainer.appendChild(locInput);
+			locContainer.appendChild(locBtn);
+			qDiv.appendChild(locContainer);
+			break;
 	}
 
 	return qDiv;
@@ -676,6 +737,7 @@ async function handleFormSubmit(e) {
 		timestamp: new Date().toISOString(),
 		language: i18n.getLanguage(),
 		basicInfo: {
+			gpsLocation: formData.get('gpsLocation'),
 			restaurantName: formData.get('restaurantName'),
 			surveyedRole: formData.get('surveyedRole'),
 			surveyedName: formData.get('surveyedName'),

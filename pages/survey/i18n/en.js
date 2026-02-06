@@ -38,6 +38,8 @@ export const en = {
 		toggleNav: 'Toggle navigation',
 		feature: 'Feature',
 		addNote: 'Add a note...',
+		getLocation: 'Get GPS Location',
+		locationRetrieved: 'Location retrieved!',
 	},
 
 	// Toast messages
@@ -49,6 +51,8 @@ export const en = {
 			'Survey submitted successfully! Thank you for your feedback.',
 		submitError: 'Failed to submit survey. Please try again.',
 		networkError: 'Network error. Please check your connection.',
+		gpsError: 'Failed to get location.',
+		gpsPermission: 'Location access denied.',
 	},
 
 	// Voice recording note

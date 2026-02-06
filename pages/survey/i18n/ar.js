@@ -37,6 +37,8 @@ export const ar = {
 		toggleNav: 'تبديل القائمة',
 		feature: 'الميزة',
 		addNote: 'أضف ملاحظة...',
+		getLocation: 'احصل على موقع GPS',
+		locationRetrieved: 'تم تحديد الموقع!',
 	},
 
 	// Toast messages
@@ -47,6 +49,8 @@ export const ar = {
 		submitSuccess: 'تم إرسال الاستبيان بنجاح! شكراً لملاحظاتك.',
 		submitError: 'فشل إرسال الاستبيان. يرجى المحاولة مرة أخرى.',
 		networkError: 'خطأ في الشبكة. يرجى التحقق من اتصالك.',
+		gpsError: 'فشل الحصول على الموقع.',
+		gpsPermission: 'تم رفض الوصول إلى الموقع.',
 	},
 
 	// Voice recording note

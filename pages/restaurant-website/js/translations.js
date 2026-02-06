@@ -296,6 +296,62 @@ const translations = {
 		en: 'Terms of Service',
 		ar: 'شروط الخدمة',
 	},
+
+	// Menu Page
+	menuBadge: {
+		en: 'Culinary Excellence',
+		ar: 'التميز في الطهي',
+	},
+	menuTitle: {
+		en: 'Our Menu',
+		ar: 'قائمتنا',
+	},
+	menuDescription: {
+		en: 'Each dish is crafted with passion using the finest seasonal ingredients. Our menu changes with the seasons to bring you the freshest flavors.',
+		ar: 'كل طبق مصنوع بشغف باستخدام أجود المكونات الموسمية. تتغير قائمتنا مع المواسم لنقدم لك أنقى النكهات.',
+	},
+
+	// About Page
+	aboutPageBadge: {
+		en: 'Est. 2010',
+		ar: 'تأسس عام 2010',
+	},
+	aboutPageTitle: {
+		en: 'Our Story',
+		ar: 'قصتنا',
+	},
+	aboutPageDescription: {
+		en: 'A passion for exceptional cuisine, a commitment to excellence, and love for bringing people together.',
+		ar: 'شغف بالطهي الاستثنائي، والتزام بالتميز، وحب لجمع الناس معًا.',
+	},
+
+	// Contact Page
+	contactBadge: {
+		en: 'Get In Touch',
+		ar: 'تواصل معنا',
+	},
+	contactTitle: {
+		en: 'Contact Us',
+		ar: 'اتصل بنا',
+	},
+	contactDescription: {
+		en: "We'd love to hear from you. Whether you have a question about our menu, want to plan a special event, or just want to say hello.",
+		ar: 'نحب أن نسمع منك. سواء كان لديك سؤال عن قائمتنا، أو تريد التخطيط لحدث خاص، أو مجرد إلقاء التحية.',
+	},
+
+	// Reservations Page
+	reservationsBadge: {
+		en: 'Reserve Your Experience',
+		ar: 'احجز تجربتك',
+	},
+	reservationsTitle: {
+		en: 'Book Your Table',
+		ar: 'احجز طاولتك',
+	},
+	reservationsDescription: {
+		en: 'Join us for an unforgettable dining experience. Reserve your table today and let us create a memorable evening for you.',
+		ar: 'انضم إلينا لتجربة طعام لا تُنسى. احجز طاولتك اليوم ودعنا نصنع لك أمسية لا تُنسى.',
+	},
 };
 
 export default translations;

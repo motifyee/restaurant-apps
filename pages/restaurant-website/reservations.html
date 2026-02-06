@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,6 +54,18 @@
 				</div>
 
 				<div style="display: flex; align-items: center; gap: var(--space-4)">
+					<!-- Language Switcher -->
+					<button
+						class="language-toggle"
+						id="language-toggle"
+						aria-label="Switch language"
+						title="Toggle language"
+					>
+						<span class="language-toggle__icon">🇸🇦</span>
+						<span class="language-toggle__text">عربي</span>
+					</button>
+
+					<!-- Theme Toggle -->
 					<button
 						class="theme-toggle navbar__theme-toggle"
 						id="theme-toggle"
@@ -115,11 +127,20 @@
 
 		<!-- Mobile Navigation -->
 		<div class="mobile-nav" id="mobile-nav">
-			<a href="index.html" class="mobile-nav__link">Home</a>
-			<a href="menu.html" class="mobile-nav__link">Menu</a>
-			<a href="about.html" class="mobile-nav__link">About</a>
-			<a href="contact.html" class="mobile-nav__link">Contact</a>
-			<a href="reservations.html" class="mobile-nav__link">Reservations</a>
+			<a href="index.html" class="mobile-nav__link" data-i18n="navHome">Home</a>
+			<a href="menu.html" class="mobile-nav__link" data-i18n="navMenu">Menu</a>
+			<a href="about.html" class="mobile-nav__link" data-i18n="navAbout"
+				>About</a
+			>
+			<a href="contact.html" class="mobile-nav__link" data-i18n="navContact"
+				>Contact</a
+			>
+			<a
+				href="reservations.html"
+				class="mobile-nav__link"
+				data-i18n="navReservations"
+				>Reservations</a
+			>
 		</div>
 
 		<!-- Hero Section -->
@@ -136,10 +157,12 @@
 			<div class="hero__content reveal">
 				<span class="hero__badge">
 					<span>📅</span>
-					Reserve Your Experience
+					<span data-i18n="reservationsBadge">Reserve Your Experience</span>
 				</span>
-				<h1 class="hero__title">Book Your Table</h1>
-				<p class="hero__subtitle">
+				<h1 class="hero__title" data-i18n="reservationsTitle">
+					Book Your Table
+				</h1>
+				<p class="hero__subtitle" data-i18n="reservationsDescription">
 					Join us for an unforgettable dining experience. Reserve your table
 					today and let us create a memorable evening for you.
 				</p>

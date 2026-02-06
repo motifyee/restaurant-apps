@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,14 +43,38 @@
 				</a>
 
 				<div class="navbar__menu">
-					<a href="index.html" class="navbar__link">Home</a>
-					<a href="menu.html" class="navbar__link">Menu</a>
-					<a href="about.html" class="navbar__link">About</a>
-					<a href="contact.html" class="navbar__link active">Contact</a>
-					<a href="reservations.html" class="navbar__link">Reservations</a>
+					<a href="index.html" class="navbar__link" data-i18n="navHome">Home</a>
+					<a href="menu.html" class="navbar__link" data-i18n="navMenu">Menu</a>
+					<a href="about.html" class="navbar__link" data-i18n="navAbout"
+						>About</a
+					>
+					<a
+						href="contact.html"
+						class="navbar__link active"
+						data-i18n="navContact"
+						>Contact</a
+					>
+					<a
+						href="reservations.html"
+						class="navbar__link"
+						data-i18n="navReservations"
+						>Reservations</a
+					>
 				</div>
 
 				<div style="display: flex; align-items: center; gap: var(--space-4)">
+					<!-- Language Switcher -->
+					<button
+						class="language-toggle"
+						id="language-toggle"
+						aria-label="Switch language"
+						title="Toggle language"
+					>
+						<span class="language-toggle__icon">🇸🇦</span>
+						<span class="language-toggle__text">عربي</span>
+					</button>
+
+					<!-- Theme Toggle -->
 					<button
 						class="theme-toggle navbar__theme-toggle"
 						id="theme-toggle"
@@ -112,25 +136,37 @@
 
 		<!-- Mobile Navigation -->
 		<div class="mobile-nav" id="mobile-nav">
-			<a href="index.html" class="mobile-nav__link">Home</a>
-			<a href="menu.html" class="mobile-nav__link">Menu</a>
-			<a href="about.html" class="mobile-nav__link">About</a>
-			<a href="contact.html" class="mobile-nav__link">Contact</a>
-			<a href="reservations.html" class="mobile-nav__link">Reservations</a>
+			<a href="index.html" class="mobile-nav__link" data-i18n="navHome">Home</a>
+			<a href="menu.html" class="mobile-nav__link" data-i18n="navMenu">Menu</a>
+			<a href="about.html" class="mobile-nav__link" data-i18n="navAbout"
+				>About</a
+			>
+			<a href="contact.html" class="mobile-nav__link" data-i18n="navContact"
+				>Contact</a
+			>
+			<a
+				href="reservations.html"
+				class="mobile-nav__link"
+				data-i18n="navReservations"
+				>Reservations</a
+			>
 		</div>
 
 		<!-- Contact Hero -->
 		<section class="contact-hero">
 			<div class="container">
 				<div class="reveal" style="text-align: center">
-					<span class="section-header__badge">Get In Touch</span>
-					<h1>Contact Us</h1>
+					<span class="section-header__badge" data-i18n="contactBadge"
+						>Get In Touch</span
+					>
+					<h1 data-i18n="contactTitle">Contact Us</h1>
 					<p
 						style="
 							max-width: 600px;
 							margin-inline: auto;
 							margin-top: var(--space-4);
 						"
+						data-i18n="contactDescription"
 					>
 						We'd love to hear from you. Whether you have a question about our
 						menu, want to plan a special event, or just want to say hello.

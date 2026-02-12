@@ -28,13 +28,14 @@
 .btn-primary {
 	background: var(--gradient-primary);
 	color: var(--text-inverse);
-	box-shadow: 0 10px 20px -5px rgba(139, 92, 246, 0.3);
+	box-shadow: var(--shadow-gold);
+	border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-primary:hover:not(:disabled) {
 	transform: translateY(-2px);
-	box-shadow: 0 15px 30px -5px rgba(139, 92, 246, 0.4);
-	filter: brightness(1.1);
+	box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+	filter: brightness(1.15);
 }
 
 .btn-primary:active:not(:disabled) {
@@ -58,7 +59,7 @@
 }
 
 .btn-ghost:hover:not(:disabled) {
-	background-color: rgba(139, 92, 246, 0.05);
+	background-color: rgba(212, 175, 55, 0.1);
 }
 
 .btn-icon {
@@ -93,28 +94,30 @@
 }
 
 .badge-primary {
-	background: rgba(99, 102, 241, 0.1);
+	background: rgba(212, 175, 55, 0.15);
 	color: var(--color-primary);
+	border: 1px solid var(--border-gold);
 }
 .badge-success {
-	background: rgba(16, 185, 129, 0.1);
-	color: var(--color-success);
+	background: rgba(46, 125, 50, 0.2);
+	color: #81c784;
 }
 .badge-warning {
-	background: rgba(245, 158, 11, 0.1);
-	color: var(--color-warning);
+	background: rgba(255, 160, 0, 0.2);
+	color: #ffb74d;
 }
 .badge-error {
-	background: rgba(239, 68, 68, 0.1);
-	color: var(--color-error);
+	background: rgba(198, 40, 40, 0.2);
+	color: #e57373;
 }
 
 /* Card */
 .card {
-	background-color: var(--bg-primary);
+	background: var(--gradient-noir);
 	border-radius: var(--radius-xl);
 	border: 1px solid var(--border-color);
 	overflow: hidden;
+	box-shadow: var(--shadow-lg);
 }
 
 .card-header {
@@ -275,8 +278,9 @@
 }
 
 .chip.active {
-	background: rgba(99, 102, 241, 0.1);
+	background: rgba(212, 175, 55, 0.15);
 	color: var(--color-primary);
+	border: 1px solid var(--border-gold);
 }
 
 .chip-close {

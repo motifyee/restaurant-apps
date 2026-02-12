@@ -14,7 +14,7 @@ export function renderLanding(container) {
                 <div class="landing-icon float pulse-glow">
                     <span>📱</span>
                 </div>
-                <h1 class="landing-title">نظام الطلب الذكي</h1>
+                <h1 class="landing-title" style="font-family: var(--font-family-serif); font-size: 3rem; margin-bottom: 0.5rem;">نظام الطلب الذكي</h1>
                 <p class="landing-subtitle">
                     مرحباً بك في ${RESTAURANT.name}
                     <br>
@@ -71,7 +71,7 @@ function showTableModal() {
 	overlay.innerHTML = `
         <div class="modal" style="max-width: 400px; margin: auto; border-radius: 24px; transform: translateY(0);">
             <div class="modal-header">
-                <h3>اختر طاولتك</h3>
+                <h3 style="font-family: var(--font-family-serif); color: var(--text-gold); font-size: 1.5rem;">اختر طاولتك</h3>
                 <button class="modal-close">✕</button>
             </div>
             <div class="modal-body">

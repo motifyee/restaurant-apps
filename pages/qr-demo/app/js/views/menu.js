@@ -200,7 +200,7 @@ function renderMenuItems(items) {
 		.map(
 			group => `
         <div class="menu-section">
-            <h3 class="menu-section-title">
+            <h3 class="menu-section-title" style="font-family: var(--font-family-serif); font-size: 1.5rem; color: var(--text-gold);">
                 <span>${group.category.icon}</span>
                 ${group.category.name}
             </h3>

@@ -8,11 +8,11 @@ import { navigate } from '../router.js';
 import { RESTAURANT, AVAILABLE_TABLES } from '../config.js';
 
 export function renderLanding(container) {
-    container.innerHTML = `
-        <div class="landing page-enter">
+	container.innerHTML = `
+        <div class="landing">
             <div class="landing-content fade-in-up">
-                <div class="landing-icon float">
-                    <span style="font-size: 48px">📱</span>
+                <div class="landing-icon float pulse-glow">
+                    <span>📱</span>
                 </div>
                 <h1 class="landing-title">نظام الطلب الذكي</h1>
                 <p class="landing-subtitle">
@@ -42,32 +42,33 @@ export function renderLanding(container) {
                 </div>
             </div>
         </div>
+
     `;
 
-    // Add event listeners
-    container.querySelectorAll('.landing-mode').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const mode = btn.dataset.mode;
-            if (mode === 'dine-in') {
-                showTableModal();
-            } else if (mode === 'queue') {
-                actions.setMode('queue');
-                navigate('queue');
-            } else if (mode === 'waitlist') {
-                actions.setMode('waitlist');
-                navigate('waitlist');
-            }
-        });
-    });
+	// Add event listeners
+	container.querySelectorAll('.landing-mode').forEach(btn => {
+		btn.addEventListener('click', () => {
+			const mode = btn.dataset.mode;
+			if (mode === 'dine-in') {
+				showTableModal();
+			} else if (mode === 'queue') {
+				actions.setMode('queue');
+				navigate('queue');
+			} else if (mode === 'waitlist') {
+				actions.setMode('waitlist');
+				navigate('waitlist');
+			}
+		});
+	});
 }
 
 /**
  * Show table selection modal
  */
 function showTableModal() {
-    const overlay = document.createElement('div');
-    overlay.className = 'modal-overlay';
-    overlay.innerHTML = `
+	const overlay = document.createElement('div');
+	overlay.className = 'modal-overlay';
+	overlay.innerHTML = `
         <div class="modal" style="max-width: 400px; margin: auto; border-radius: 24px; transform: translateY(0);">
             <div class="modal-header">
                 <h3>اختر طاولتك</h3>
@@ -78,7 +79,8 @@ function showTableModal() {
                     امسح رمز QR الموجود على طاولتك، أو اختر رقم الطاولة يدوياً:
                 </p>
                 <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
-                    ${AVAILABLE_TABLES.map(table => `
+                    ${AVAILABLE_TABLES.map(
+											table => `
                         <button class="table-btn" data-table="${table}"
                             style="aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
                                    background: var(--bg-tertiary); border: 2px solid var(--border-color);
@@ -86,49 +88,50 @@ function showTableModal() {
                                    transition: all 0.2s;">
                             ${table}
                         </button>
-                    `).join('')}
+                    `,
+										).join('')}
                 </div>
             </div>
         </div>
     `;
 
-    document.body.appendChild(overlay);
-    requestAnimationFrame(() => overlay.classList.add('active'));
+	document.body.appendChild(overlay);
+	requestAnimationFrame(() => overlay.classList.add('active'));
 
-    // Close button
-    overlay.querySelector('.modal-close').addEventListener('click', () => {
-        overlay.classList.remove('active');
-        setTimeout(() => overlay.remove(), 300);
-    });
+	// Close button
+	overlay.querySelector('.modal-close').addEventListener('click', () => {
+		overlay.classList.remove('active');
+		setTimeout(() => overlay.remove(), 300);
+	});
 
-    // Table selection
-    overlay.querySelectorAll('.table-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const table = parseInt(btn.dataset.table);
-            actions.setMode('dine-in', table);
-            overlay.classList.remove('active');
-            setTimeout(() => {
-                overlay.remove();
-                navigate('menu');
-            }, 300);
-        });
+	// Table selection
+	overlay.querySelectorAll('.table-btn').forEach(btn => {
+		btn.addEventListener('click', () => {
+			const table = parseInt(btn.dataset.table);
+			actions.setMode('dine-in', table);
+			overlay.classList.remove('active');
+			setTimeout(() => {
+				overlay.remove();
+				navigate('menu');
+			}, 300);
+		});
 
-        btn.addEventListener('mouseenter', () => {
-            btn.style.borderColor = 'var(--color-primary)';
-            btn.style.background = 'rgba(99, 102, 241, 0.1)';
-        });
+		btn.addEventListener('mouseenter', () => {
+			btn.style.borderColor = 'var(--color-primary)';
+			btn.style.background = 'rgba(99, 102, 241, 0.1)';
+		});
 
-        btn.addEventListener('mouseleave', () => {
-            btn.style.borderColor = 'var(--border-color)';
-            btn.style.background = 'var(--bg-tertiary)';
-        });
-    });
+		btn.addEventListener('mouseleave', () => {
+			btn.style.borderColor = 'var(--border-color)';
+			btn.style.background = 'var(--bg-tertiary)';
+		});
+	});
 
-    // Close on overlay click
-    overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) {
-            overlay.classList.remove('active');
-            setTimeout(() => overlay.remove(), 300);
-        }
-    });
+	// Close on overlay click
+	overlay.addEventListener('click', e => {
+		if (e.target === overlay) {
+			overlay.classList.remove('active');
+			setTimeout(() => overlay.remove(), 300);
+		}
+	});
 }

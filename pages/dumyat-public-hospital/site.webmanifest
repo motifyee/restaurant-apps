@@ -1,0 +1,16 @@
+{
+  "name": "Dumyat Public Hospital",
+  "short_name": "Dumyat Hospital",
+  "description": "A national beacon of public health excellence",
+  "start_url": "/ar/",
+  "display": "standalone",
+  "background_color": "#F8F9FC",
+  "theme_color": "#1B3F6E",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
